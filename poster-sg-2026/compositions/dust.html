@@ -12,10 +12,10 @@
     for (let n = 0; n < 42; n++) {
       const x = rnd() * 1080, y0 = rnd() * 1350 + 200, rise = 500 + rnd() * 900, s = 0.4 + rnd() * 1.1;
       const el = "#dust-" + n;
-      tl.fromTo(el, {x: x, y: y0, scale: s}, {x: x + (rnd() - 0.5) * 160, y: y0 - rise, scale: s, duration: 81.8, ease: "none"}, 0);
+      tl.fromTo(el, {x: x, y: y0, scale: s}, {x: x + (rnd() - 0.5) * 160, y: y0 - rise, scale: s, duration: 78.633, ease: "none"}, 0);
       // twinkle: a finite run of fades, phase-shifted per dot
       const period = 1.2 + rnd() * 1.8, phase = rnd() * period;
-      const reps = Math.floor((81.8 - phase) / period);
+      const reps = Math.floor((78.633 - phase) / period);
       tl.fromTo(el, {opacity: 0.05}, {opacity: 0.55 + rnd() * 0.4, duration: period / 2, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, reps * 2 - 1)}, phase);
     }
     window.__timelines["dust"] = tl;

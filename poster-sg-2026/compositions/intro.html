@@ -37,21 +37,21 @@
   </div>
   <script>
     const tl = gsap.timeline({ paused: true });
-    tl.fromTo("#intro-rays",{rotation:0},{rotation:21.2,duration:5.3,ease:"none"},0);
-    tl.fromTo("#intro-bg",{scale:1.12},{scale:1,duration:5.3,ease:"none"},0);
+    tl.fromTo("#intro-rays",{rotation:0},{rotation:22,duration:5.5,ease:"none"},0);
+    tl.fromTo("#intro-bg",{scale:1.12},{scale:1,duration:5.5,ease:"none"},0);
     // card A — the reference's voiceover line, as type
     tl.fromTo("#intro-a1 .w",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.14,stagger:0.09,ease:"power2.out"},0.12);
     tl.fromTo("#intro-a2 .w",{opacity:0,scale:1.5},{opacity:1,scale:1,duration:0.22,stagger:0.12,ease:"power4.in"},0.5);
-    tl.to("#intro-a",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power2.in"},2.1);
+    tl.to("#intro-a",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power2.in"},2.3);
     // card B — the event
-    tl.fromTo("#intro-b0",{opacity:0,y:-12},{opacity:1,y:0,duration:0.3,ease:"expo.out"},2.3);
-    tl.fromTo("#intro-b1",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},2.35);
-    tl.fromTo("#intro-b2",{opacity:0,filter:"blur(8px)"},{opacity:1,filter:"blur(0px)",duration:0.18,ease:"power2.out"},2.6);
-    tl.fromTo("#intro-b3",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},2.75);
-    tl.fromTo("#intro-line",{scaleX:0},{scaleX:1,duration:0.5,ease:"expo.out"},3);
-    tl.fromTo("#intro-c1",{opacity:0,x:-60},{opacity:1,x:0,duration:0.45,ease:"expo.out"},3.15);
-    tl.fromTo("#intro-c2",{opacity:0,x:60},{opacity:1,x:0,duration:0.45,ease:"expo.out"},3.27);
-    tl.to("#intro-b",{scale:1.8,opacity:0,filter:"blur(10px)",duration:0.25,ease:"power3.in"},5.05);
+    tl.fromTo("#intro-b0",{opacity:0,y:-12},{opacity:1,y:0,duration:0.3,ease:"expo.out"},2.5);
+    tl.fromTo("#intro-b1",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},2.55);
+    tl.fromTo("#intro-b2",{opacity:0,filter:"blur(8px)"},{opacity:1,filter:"blur(0px)",duration:0.18,ease:"power2.out"},2.8);
+    tl.fromTo("#intro-b3",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},2.95);
+    tl.fromTo("#intro-line",{scaleX:0},{scaleX:1,duration:0.5,ease:"expo.out"},3.2);
+    tl.fromTo("#intro-c1",{opacity:0,x:-60},{opacity:1,x:0,duration:0.45,ease:"expo.out"},3.35);
+    tl.fromTo("#intro-c2",{opacity:0,x:60},{opacity:1,x:0,duration:0.45,ease:"expo.out"},3.47);
+    tl.to("#intro-b",{scale:1.8,opacity:0,filter:"blur(10px)",duration:0.25,ease:"power3.in"},5.25);
     window.__timelines["intro"] = tl;
   </script>
 </template>

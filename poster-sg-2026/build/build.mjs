@@ -45,13 +45,13 @@ function posterScene(p, i, total) {
   switch (p.enter) {
     case "assemble":
       enter = `
-    tl.fromTo(${q("hero")},{y:-70,scale:1.14,opacity:0},{y:0,scale:1,opacity:1,duration:0.55,ease:"expo.out"},0.02);
-    tl.fromTo(${q("name")},{clipPath:"inset(${BANDS.name[0]}% 100% ${r3(100 - BANDS.name[1])}% 0%)"},{clipPath:"inset(${BANDS.name[0]}% 0% ${r3(100 - BANDS.name[1])}% 0%)",duration:0.4,ease:"power3.out"},0.22);
-    tl.fromTo(${q("tahniah")},{scale:1.9,opacity:0},{scale:1,opacity:1,duration:0.26,ease:"power4.in"},0.42);
-    shake(0.68);
-    tl.fromTo(${q("country")},{y:46,opacity:0},{y:0,opacity:1,duration:0.45,ease:"expo.out"},0.66);
-    tl.fromTo(${q("event")},{y:46,opacity:0},{y:0,opacity:1,duration:0.45,ease:"expo.out"},0.74);
-    tl.fromTo(${q("foot")},{y:60,opacity:0},{y:0,opacity:1,duration:0.5,ease:"expo.out"},0.82);`;
+    tl.fromTo(${q("hero")},{y:-70,scale:1.14,opacity:0},{y:0,scale:1,opacity:1,duration:0.5,ease:"expo.out"},0.0);
+    tl.fromTo(${q("name")},{clipPath:"inset(${BANDS.name[0]}% 100% ${r3(100 - BANDS.name[1])}% 0%)"},{clipPath:"inset(${BANDS.name[0]}% 0% ${r3(100 - BANDS.name[1])}% 0%)",duration:0.35,ease:"power3.out"},0.1);
+    tl.fromTo(${q("tahniah")},{scale:1.9,opacity:0},{scale:1,opacity:1,duration:0.25,ease:"power4.in"},0.25);
+    shake(0.5);
+    tl.fromTo(${q("country")},{y:46,opacity:0},{y:0,opacity:1,duration:0.45,ease:"expo.out"},0.48);
+    tl.fromTo(${q("event")},{y:46,opacity:0},{y:0,opacity:1,duration:0.45,ease:"expo.out"},0.56);
+    tl.fromTo(${q("foot")},{y:60,opacity:0},{y:0,opacity:1,duration:0.5,ease:"expo.out"},0.64);`;
       break;
     case "face":
       enter = `
@@ -325,7 +325,7 @@ function groupScene(s) {
   <div id="root" data-composition-id="group" data-width="${W}" data-height="${H}">
     <img id="group-bg" src="assets/bg/group.jpg" alt=""/>
     <div id="group-cam" data-layout-allow-overflow><img id="group-img" src="assets/posters/group.jpg" alt=""/></div>
-    <div id="group-top"><div id="group-t1">TAHNIAH!</div><div id="group-t2">MALAYSIA THERAPIST TEAM</div></div>
+    <div id="group-top"><div id="group-t1">TAHNIAH!</div><div id="group-t2">BARISAN WAKIL MALAYSIA</div></div>
     <div id="group-bot"><div id="group-b1">28 – 29 NOV 2026</div><div id="group-b2">HOTEL CHANCELLOR @ ORCHARD · SINGAPORE</div></div>
     <div id="group-flash" data-layout-ignore></div>
   </div>
@@ -411,6 +411,61 @@ function finaleScene(s, posters) {
 `;
 }
 
+// ---------------------------------------------------------------- MTT members scene (official members poster, with logo)
+function mttScene(s) {
+  const D = s.dur;
+  const IW = 1672, IH = 941;
+  const at = (px, py, sc) => ({ x: r3(W / 2 - px * sc), y: r3(H / 2 - py * sc), scale: sc });
+  const k0 = at(334, 215, 2.75), k1 = at(334, 215, 2.55);
+  const fit = { x: 0, y: r3((H - IH * (W / IW)) / 2), scale: r3(W / IW) };
+  const L = s.pullAt;
+  return `<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#030716;}
+    #mtt-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+    #mtt-cam{position:absolute;left:0;top:0;width:${IW}px;height:${IH}px;transform-origin:0 0;}
+    #mtt-img{position:absolute;left:0;top:0;width:${IW}px;height:${IH}px;}
+    #mtt-grad{position:absolute;left:0;top:700px;width:${W}px;height:650px;background:linear-gradient(180deg,rgba(3,7,22,0) 0%,rgba(3,7,22,.88) 40%,rgba(3,7,22,.95) 100%);}
+    #mtt-a{position:absolute;left:0;top:1010px;width:${W}px;text-align:center;}
+    #mtt-a1{font:800 40px/1 "MontserratX",sans-serif;color:#fff;letter-spacing:.36em;padding-left:.36em;}
+    #mtt-a2{margin-top:22px;font:900 76px/1.1 "Cinzel",serif;${GOLD}filter:drop-shadow(0 5px 0 #5a3a05) drop-shadow(0 0 26px rgba(255,190,60,.45));}
+    #mtt-top{position:absolute;left:0;top:96px;width:${W}px;text-align:center;}
+    #mtt-t0{font:800 36px/1 "MontserratX",sans-serif;color:#fff;letter-spacing:.3em;padding-left:.3em;}
+    #mtt-t1{margin-top:18px;font:900 120px/1 "Cinzel",serif;${GOLD}filter:drop-shadow(0 5px 0 #5a3a05) drop-shadow(0 0 26px rgba(255,190,60,.45));}
+    #mtt-bot{position:absolute;left:0;top:1030px;width:${W}px;text-align:center;}
+    #mtt-b1{display:inline-block;padding:0 44px;height:84px;border-radius:42px;background:linear-gradient(180deg,#ffe48a,#c88a14);font:900 44px/84px "Cinzel",serif;color:#1a1204;box-shadow:0 0 40px rgba(255,200,80,.5);}
+    #mtt-b2{margin-top:22px;font:800 32px/1.3 "MontserratX",sans-serif;color:#ffe9b0;letter-spacing:.08em;}
+    #mtt-flash{position:absolute;inset:0;background:#fff8e6;opacity:0;}
+  </style>
+  <div id="root" data-composition-id="mtt" data-width="${W}" data-height="${H}">
+    <img id="mtt-bg" src="assets/bg/mtt.jpg" alt=""/>
+    <div id="mtt-cam" data-layout-allow-overflow><img id="mtt-img" src="assets/posters/mtt.jpg" alt=""/></div>
+    <div id="mtt-grad"></div>
+    <div id="mtt-a"><div id="mtt-a1">AHLI RASMI</div><div id="mtt-a2">MALAYSIA<br/>THERAPIST TEAM</div></div>
+    <div id="mtt-top"><div id="mtt-t0">BANGGA BERSAMA</div><div id="mtt-t1">AHLI MTT</div></div>
+    <div id="mtt-bot"><div id="mtt-b1">17 AHLI RASMI</div><div id="mtt-b2">MALAYSIA THERAPIST TEAM · SINGAPORE 2026</div></div>
+    <div id="mtt-flash" data-layout-ignore></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#mtt-flash",{opacity:1},{opacity:0,duration:0.25,ease:"power2.out"},0);
+    tl.fromTo("#mtt-cam",${JSON.stringify(k0)},{...${JSON.stringify(k1)},duration:${r3(L)},ease:"power1.out"},0);
+    tl.fromTo("#mtt-a1",{opacity:0,y:-10},{opacity:1,y:0,duration:0.3,ease:"expo.out"},0.2);
+    tl.fromTo("#mtt-a2",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:0.24,ease:"power4.in"},0.35);
+    tl.to("#mtt-a",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power2.in"},${r3(L - 0.1)});
+    tl.fromTo("#mtt-grad",{opacity:1},{opacity:0,duration:0.5,ease:"power2.inOut"},${r3(L)});
+    tl.to("#mtt-cam",{...${JSON.stringify(fit)},duration:0.8,ease:"power3.inOut"},${r3(L)});
+    tl.fromTo("#mtt-t0",{opacity:0,y:-12},{opacity:1,y:0,duration:0.3,ease:"expo.out"},${r3(L + 0.75)});
+    tl.fromTo("#mtt-t1",{opacity:0,scale:1.8},{opacity:1,scale:1,duration:0.24,ease:"power4.in"},${r3(L + 0.85)});
+    tl.fromTo("#mtt-b1",{opacity:0,scale:0.4},{opacity:1,scale:1,duration:0.4,ease:"back.out(1.8)"},${r3(L + 1.15)});
+    tl.fromTo("#mtt-b2",{opacity:0,y:16},{opacity:1,y:0,duration:0.4,ease:"expo.out"},${r3(L + 1.3)});
+    tl.to(["#mtt-cam","#mtt-top","#mtt-bot"],{opacity:0,filter:"blur(10px)",duration:0.2,ease:"power3.in"},${r3(D - 0.2)});
+    window.__timelines["mtt"] = tl;
+  </script>
+</template>
+`;
+}
+
 // ---------------------------------------------------------------- gold dust overlay (whole film)
 function dustScene(D) {
   const N = 42;
@@ -453,7 +508,7 @@ const push = (id, dur, html, track = 1) => {
   return start;
 };
 
-const hook = cfg.hook, intro = cfg.intro, group = cfg.group, finale = cfg.finale;
+const hook = cfg.hook, intro = cfg.intro, group = cfg.group, finale = cfg.finale, mtt = cfg.mtt;
 push("hook", hook.dur, hookScene(hook, posters));
 push("intro", intro.dur, introScene(intro));
 const groupStart = push("group", group.dur, groupScene(group));
@@ -461,9 +516,10 @@ const posterStarts = [];
 posters.forEach((p, i) => {
   const next = posters[i + 1];
   p.flashIn = i === 0 || ["assemble", "face", "slice"].includes(p.enter);
-  p.exit = !next ? "zoom" : ({ whip: "whip", zoomin: "zoom", flip: "flipout", drop: "drop" }[next.enter] || "flash");
+  p.exit = !next ? "flash" : ({ whip: "whip", zoomin: "zoom", flip: "flipout", drop: "drop" }[next.enter] || "flash");
   posterStarts.push(push(`p${String(i + 1).padStart(2, "0")}`, p.dur, posterScene(p, i, posters.length)));
 });
+const mttStart = push("mtt", mtt.dur, mttScene(mtt));
 const finaleStart = push("finale", finale.dur, finaleScene(finale, posters));
 const TOTAL = snap(t);
 
@@ -488,7 +544,7 @@ const iS = scenes[1].start;
 hit("impact-bass-1", iS + 0.62 + 0.22, 0.45);
 hit("impact-bass-1", iS + intro.b2 + 0.27, 0.55);
 hit("whoosh-high", iS + intro.b2 + 0.9, 0.35);
-hit("riser", groupStart + 0.05, 0.45);
+hit("riser", groupStart + group.keys[5] + 0.75, 0.55);
 // group tour
 group.keys.slice(0, 4).forEach((k, j) => hit(["whoosh-low", "whoosh", "whoosh-low", "whoosh"][j], groupStart + k + 0.45, 0.28));
 hit("impact-bass-2", groupStart + group.keys[5] + 0.78, 0.7);
@@ -499,7 +555,7 @@ posters.forEach((p, i) => {
   const s0 = posterStarts[i];
   const w = whooshes[i % 3];
   switch (p.enter) {
-    case "assemble": hit("impact-bass-1", s0 + 0.68, 0.55); break;
+    case "assemble": hit("impact-bass-1", s0 + 0.5, 0.55); break;
     case "face": hit(w, s0 + 0.7, 0.4); break;
     case "slice": hit("impact-deep", s0 + 0.3, 0.55); break;
     case "whip": hit(w, s0 + 0.02, 0.45); break;
@@ -509,6 +565,14 @@ posters.forEach((p, i) => {
   }
   if (p.sparkle) hit("sparkle", s0 + (p.sweepAt ?? 0.95) + 0.3, 0.3);
 });
+// MTT members
+hit("impact-deep", mttStart + 0.0 + PEAK["impact-deep"] - 1 / FPS, 0.6);
+hit("impact-bass-1", mttStart + 0.59, 0.5);
+hit("whoosh-low", mttStart + mtt.pullAt + 0.4, 0.4);
+hit("impact-bass-2", mttStart + mtt.pullAt + 0.8, 0.65);
+hit("sparkle", mttStart + mtt.pullAt + 0.9, 0.35);
+hit("pop", mttStart + mtt.pullAt + 1.3, 0.45);
+hit("whoosh-high", mttStart + mtt.dur - 0.05, 0.35);
 // finale
 hit("whoosh", finaleStart + 0.1, 0.35);
 hit("impact-bass-1", finaleStart + finale.textAt + 0.24, 0.7);
@@ -528,7 +592,11 @@ sfx.sort((a, b) => a.start - b.start).forEach((c) => {
 const music = cfg.music;
 const sceneHosts = scenes.map((s, n) => `      <div id="${s.id}" data-composition-id="${s.id}" data-composition-src="compositions/${s.id}.html" data-start="${r3(s.start)}" data-duration="${r3(s.dur)}" data-track-index="1" data-track-kind="graphics" data-width="${W}" data-height="${H}" style="z-index:${n + 1}"></div>`).join("\n");
 const sfxTags = sfx.map((c, n) => `      <audio id="sfx-${String(n + 1).padStart(2, "0")}" class="clip" src="assets/sfx/${c.name}.mp3" data-start="${r3(c.start)}" data-duration="${r3(Math.min(DUR[c.name], TOTAL - c.start))}" data-track-index="${c.lane}" data-volume="${c.vol}"></audio>`).join("\n");
-const musicTag = music && music.file ? `      <audio id="music" class="clip" src="${music.file}" data-start="0" data-duration="${r3(TOTAL)}" data-media-start="${music.offset || 0}" data-track-index="8" data-volume="${music.volume ?? 0.8}" data-fade-out="${music.fadeOut ?? 2}"></audio>` : "";
+const XF = 0.15; // music edit: crossfade at the MTT cut, masked by its flash + impact
+const musicTag = music && music.file ? [
+  `      <audio id="music" class="clip" src="${music.file}" data-start="0" data-duration="${r3(mttStart + XF)}" data-media-start="${music.offset || 0}" data-track-index="8" data-volume="${music.volume ?? 0.8}" data-fade-in="0.05" data-fade-out="${2 * XF}"></audio>`,
+  `      <audio id="music-outro" class="clip" src="${music.file}" data-start="${r3(mttStart - XF)}" data-duration="${r3(TOTAL - mttStart + XF)}" data-media-start="${r3(music.outroFrom - XF)}" data-track-index="9" data-volume="${music.volume ?? 0.8}" data-fade-in="${2 * XF}" data-fade-out="${music.fadeOut ?? 2}"></audio>`,
+].join("\n") : "";
 
 const index = `<!doctype html>
 <html lang="ms">

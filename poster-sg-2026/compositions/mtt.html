@@ -1,0 +1,44 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#030716;}
+    #mtt-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+    #mtt-cam{position:absolute;left:0;top:0;width:1672px;height:941px;transform-origin:0 0;}
+    #mtt-img{position:absolute;left:0;top:0;width:1672px;height:941px;}
+    #mtt-grad{position:absolute;left:0;top:700px;width:1080px;height:650px;background:linear-gradient(180deg,rgba(3,7,22,0) 0%,rgba(3,7,22,.88) 40%,rgba(3,7,22,.95) 100%);}
+    #mtt-a{position:absolute;left:0;top:1010px;width:1080px;text-align:center;}
+    #mtt-a1{font:800 40px/1 "MontserratX",sans-serif;color:#fff;letter-spacing:.36em;padding-left:.36em;}
+    #mtt-a2{margin-top:22px;font:900 76px/1.1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #5a3a05) drop-shadow(0 0 26px rgba(255,190,60,.45));}
+    #mtt-top{position:absolute;left:0;top:96px;width:1080px;text-align:center;}
+    #mtt-t0{font:800 36px/1 "MontserratX",sans-serif;color:#fff;letter-spacing:.3em;padding-left:.3em;}
+    #mtt-t1{margin-top:18px;font:900 120px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #5a3a05) drop-shadow(0 0 26px rgba(255,190,60,.45));}
+    #mtt-bot{position:absolute;left:0;top:1030px;width:1080px;text-align:center;}
+    #mtt-b1{display:inline-block;padding:0 44px;height:84px;border-radius:42px;background:linear-gradient(180deg,#ffe48a,#c88a14);font:900 44px/84px "Cinzel",serif;color:#1a1204;box-shadow:0 0 40px rgba(255,200,80,.5);}
+    #mtt-b2{margin-top:22px;font:800 32px/1.3 "MontserratX",sans-serif;color:#ffe9b0;letter-spacing:.08em;}
+    #mtt-flash{position:absolute;inset:0;background:#fff8e6;opacity:0;}
+  </style>
+  <div id="root" data-composition-id="mtt" data-width="1080" data-height="1350">
+    <img id="mtt-bg" src="assets/bg/mtt.jpg" alt=""/>
+    <div id="mtt-cam" data-layout-allow-overflow><img id="mtt-img" src="assets/posters/mtt.jpg" alt=""/></div>
+    <div id="mtt-grad"></div>
+    <div id="mtt-a"><div id="mtt-a1">AHLI RASMI</div><div id="mtt-a2">MALAYSIA<br/>THERAPIST TEAM</div></div>
+    <div id="mtt-top"><div id="mtt-t0">BANGGA BERSAMA</div><div id="mtt-t1">AHLI MTT</div></div>
+    <div id="mtt-bot"><div id="mtt-b1">17 AHLI RASMI</div><div id="mtt-b2">MALAYSIA THERAPIST TEAM · SINGAPORE 2026</div></div>
+    <div id="mtt-flash" data-layout-ignore></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#mtt-flash",{opacity:1},{opacity:0,duration:0.25,ease:"power2.out"},0);
+    tl.fromTo("#mtt-cam",{"x":-378.5,"y":83.75,"scale":2.75},{...{"x":-311.7,"y":126.75,"scale":2.55},duration:1.6,ease:"power1.out"},0);
+    tl.fromTo("#mtt-a1",{opacity:0,y:-10},{opacity:1,y:0,duration:0.3,ease:"expo.out"},0.2);
+    tl.fromTo("#mtt-a2",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:0.24,ease:"power4.in"},0.35);
+    tl.to("#mtt-a",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power2.in"},1.5);
+    tl.fromTo("#mtt-grad",{opacity:1},{opacity:0,duration:0.5,ease:"power2.inOut"},1.6);
+    tl.to("#mtt-cam",{...{"x":0,"y":371.089,"scale":0.646},duration:0.8,ease:"power3.inOut"},1.6);
+    tl.fromTo("#mtt-t0",{opacity:0,y:-12},{opacity:1,y:0,duration:0.3,ease:"expo.out"},2.35);
+    tl.fromTo("#mtt-t1",{opacity:0,scale:1.8},{opacity:1,scale:1,duration:0.24,ease:"power4.in"},2.45);
+    tl.fromTo("#mtt-b1",{opacity:0,scale:0.4},{opacity:1,scale:1,duration:0.4,ease:"back.out(1.8)"},2.75);
+    tl.fromTo("#mtt-b2",{opacity:0,y:16},{opacity:1,y:0,duration:0.4,ease:"expo.out"},2.9);
+    tl.to(["#mtt-cam","#mtt-top","#mtt-bot"],{opacity:0,filter:"blur(10px)",duration:0.2,ease:"power3.in"},4.8);
+    window.__timelines["mtt"] = tl;
+  </script>
+</template>

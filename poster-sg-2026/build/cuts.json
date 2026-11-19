@@ -1,120 +1,125 @@
 {
- "total": 81.8,
+ "total": 78.63333333333334,
  "scenes": [
   {
    "id": "hook",
    "start": 0,
-   "end": 3.4
+   "end": 3.5
   },
   {
    "id": "intro",
-   "start": 3.4,
-   "end": 8.7
+   "start": 3.5,
+   "end": 9
   },
   {
    "id": "group",
-   "start": 8.7,
-   "end": 17.7
+   "start": 9,
+   "end": 18
   },
   {
    "id": "p01",
-   "start": 17.7,
-   "end": 21.1
+   "start": 18,
+   "end": 20.5
   },
   {
    "id": "p02",
-   "start": 21.1,
-   "end": 24
+   "start": 20.5,
+   "end": 23
   },
   {
    "id": "p03",
-   "start": 24,
-   "end": 26.9
+   "start": 23,
+   "end": 25.5
   },
   {
    "id": "p04",
-   "start": 26.9,
-   "end": 29.8
+   "start": 25.5,
+   "end": 28
   },
   {
    "id": "p05",
-   "start": 29.8,
-   "end": 32.7
+   "start": 28,
+   "end": 30.5
   },
   {
    "id": "p06",
-   "start": 32.7,
-   "end": 35.6
+   "start": 30.5,
+   "end": 33
   },
   {
    "id": "p07",
-   "start": 35.6,
-   "end": 38.5
+   "start": 33,
+   "end": 35.6
   },
   {
    "id": "p08",
-   "start": 38.5,
-   "end": 41.4
+   "start": 35.6,
+   "end": 38.267
   },
   {
    "id": "p09",
-   "start": 41.4,
-   "end": 44.3
+   "start": 38.267,
+   "end": 40.833
   },
   {
    "id": "p10",
-   "start": 44.3,
-   "end": 47.2
+   "start": 40.833,
+   "end": 43.333
   },
   {
    "id": "p11",
-   "start": 47.2,
-   "end": 50.1
+   "start": 43.333,
+   "end": 45.9
   },
   {
    "id": "p12",
-   "start": 50.1,
-   "end": 53
+   "start": 45.9,
+   "end": 48.5
   },
   {
    "id": "p13",
-   "start": 53,
-   "end": 55.9
+   "start": 48.5,
+   "end": 51.133
   },
   {
    "id": "p14",
-   "start": 55.9,
-   "end": 58.8
+   "start": 51.133,
+   "end": 53.7
   },
   {
    "id": "p15",
-   "start": 58.8,
-   "end": 61.7
+   "start": 53.7,
+   "end": 56.3
   },
   {
    "id": "p16",
-   "start": 61.7,
-   "end": 64.6
+   "start": 56.3,
+   "end": 58.9
   },
   {
    "id": "p17",
-   "start": 64.6,
-   "end": 67.5
+   "start": 58.9,
+   "end": 61.5
   },
   {
    "id": "p18",
-   "start": 67.5,
-   "end": 70.4
+   "start": 61.5,
+   "end": 64.067
   },
   {
    "id": "p19",
-   "start": 70.4,
-   "end": 73.8
+   "start": 64.067,
+   "end": 66.633
+  },
+  {
+   "id": "mtt",
+   "start": 66.633,
+   "end": 71.633
   },
   {
    "id": "finale",
-   "start": 73.8,
-   "end": 81.8
+   "start": 71.633,
+   "end": 78.633
   }
  ],
  "sfx": [
@@ -125,254 +130,296 @@
    "lane": 10
   },
   {
-   "name": "whoosh-cinematic",
-   "start": 0.8666666666666667,
-   "vol": 0.5,
+   "name": "impact-bass-1",
+   "start": 0.9666666666666667,
+   "vol": 0.8,
    "lane": 11
   },
   {
-   "name": "impact-bass-1",
-   "start": 1.0333333333333334,
-   "vol": 0.8,
+   "name": "whoosh-cinematic",
+   "start": 0.9666666666666667,
+   "vol": 0.5,
    "lane": 12
   },
   {
    "name": "pop",
-   "start": 1.6666666666666667,
+   "start": 1.9,
    "vol": 0.55,
    "lane": 13
   },
   {
    "name": "impact-bass-1",
-   "start": 4.2,
+   "start": 4.3,
    "vol": 0.45,
+   "lane": 10
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 6.233333333333333,
+   "vol": 0.55,
+   "lane": 11
+  },
+  {
+   "name": "whoosh-high",
+   "start": 6.8,
+   "vol": 0.35,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-low",
+   "start": 10.266666666666667,
+   "vol": 0.28,
+   "lane": 10
+  },
+  {
+   "name": "whoosh",
+   "start": 11.333333333333334,
+   "vol": 0.28,
    "lane": 10
   },
   {
    "name": "riser",
-   "start": 5.3,
+   "start": 12.066666666666666,
+   "vol": 0.55,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-low",
+   "start": 12.266666666666667,
+   "vol": 0.28,
+   "lane": 11
+  },
+  {
+   "name": "whoosh",
+   "start": 13.333333333333334,
+   "vol": 0.28,
+   "lane": 11
+  },
+  {
+   "name": "impact-bass-2",
+   "start": 13.566666666666666,
+   "vol": 0.7,
+   "lane": 12
+  },
+  {
+   "name": "sparkle",
+   "start": 15.766666666666667,
+   "vol": 0.4,
+   "lane": 11
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 18.466666666666665,
+   "vol": 0.55,
+   "lane": 10
+  },
+  {
+   "name": "sparkle",
+   "start": 19.3,
+   "vol": 0.3,
+   "lane": 11
+  },
+  {
+   "name": "whoosh-high",
+   "start": 20.433333333333334,
    "vol": 0.45,
    "lane": 12
   },
   {
-   "name": "impact-bass-1",
-   "start": 5.933333333333334,
-   "vol": 0.55,
-   "lane": 13
-  },
-  {
-   "name": "whoosh-high",
-   "start": 6.5,
-   "vol": 0.35,
+   "name": "whoosh-low",
+   "start": 23.533333333333335,
+   "vol": 0.4,
    "lane": 10
   },
   {
+   "name": "impact-deep",
+   "start": 25.733333333333334,
+   "vol": 0.55,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-high",
+   "start": 27.933333333333334,
+   "vol": 0.4,
+   "lane": 11
+  },
+  {
    "name": "whoosh-low",
-   "start": 9.866666666666667,
-   "vol": 0.28,
+   "start": 30.5,
+   "vol": 0.4,
+   "lane": 10
+  },
+  {
+   "name": "sparkle",
+   "start": 31.4,
+   "vol": 0.3,
    "lane": 10
   },
   {
    "name": "whoosh",
-   "start": 11.033333333333333,
-   "vol": 0.28,
+   "start": 33.56666666666667,
+   "vol": 0.4,
+   "lane": 10
+  },
+  {
+   "name": "impact-deep",
+   "start": 35.9,
+   "vol": 0.5,
+   "lane": 10
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 38.733333333333334,
+   "vol": 0.55,
+   "lane": 10
+  },
+  {
+   "name": "whoosh",
+   "start": 40.733333333333334,
+   "vol": 0.45,
+   "lane": 11
+  },
+  {
+   "name": "impact-deep",
+   "start": 43.56666666666667,
+   "vol": 0.55,
+   "lane": 10
+  },
+  {
+   "name": "sparkle",
+   "start": 44.233333333333334,
+   "vol": 0.3,
+   "lane": 11
+  },
+  {
+   "name": "whoosh-low",
+   "start": 45.9,
+   "vol": 0.4,
+   "lane": 12
+  },
+  {
+   "name": "whoosh-high",
+   "start": 48.43333333333333,
+   "vol": 0.4,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-high",
+   "start": 51.733333333333334,
+   "vol": 0.4,
    "lane": 10
   },
   {
    "name": "whoosh-low",
-   "start": 12.066666666666666,
-   "vol": 0.28,
+   "start": 53.56666666666667,
+   "vol": 0.45,
    "lane": 10
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 56.766666666666666,
+   "vol": 0.55,
+   "lane": 10
+  },
+  {
+   "name": "sparkle",
+   "start": 57.6,
+   "vol": 0.3,
+   "lane": 11
+  },
+  {
+   "name": "impact-deep",
+   "start": 59.2,
+   "vol": 0.5,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-low",
+   "start": 61.5,
+   "vol": 0.4,
+   "lane": 11
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 64.53333333333333,
+   "vol": 0.55,
+   "lane": 10
+  },
+  {
+   "name": "sparkle",
+   "start": 65.36666666666666,
+   "vol": 0.3,
+   "lane": 11
+  },
+  {
+   "name": "impact-deep",
+   "start": 66.63333333333334,
+   "vol": 0.6,
+   "lane": 12
   },
   {
    "name": "impact-bass-2",
-   "start": 13.133333333333333,
-   "vol": 0.7,
+   "start": 67.06666666666666,
+   "vol": 0.65,
    "lane": 10
-  },
-  {
-   "name": "whoosh",
-   "start": 13.233333333333333,
-   "vol": 0.28,
-   "lane": 11
-  },
-  {
-   "name": "sparkle",
-   "start": 15.3,
-   "vol": 0.4,
-   "lane": 11
   },
   {
    "name": "impact-bass-1",
-   "start": 18.333333333333332,
-   "vol": 0.55,
-   "lane": 10
-  },
-  {
-   "name": "sparkle",
-   "start": 19,
-   "vol": 0.3,
-   "lane": 11
-  },
-  {
-   "name": "whoosh-high",
-   "start": 21.033333333333335,
-   "vol": 0.45,
-   "lane": 10
-  },
-  {
-   "name": "whoosh-low",
-   "start": 24.533333333333335,
-   "vol": 0.4,
-   "lane": 10
-  },
-  {
-   "name": "impact-deep",
-   "start": 27.133333333333333,
-   "vol": 0.55,
-   "lane": 10
-  },
-  {
-   "name": "whoosh-high",
-   "start": 29.733333333333334,
-   "vol": 0.4,
-   "lane": 10
-  },
-  {
-   "name": "whoosh-low",
-   "start": 32.7,
-   "vol": 0.4,
-   "lane": 10
-  },
-  {
-   "name": "sparkle",
-   "start": 33.6,
-   "vol": 0.3,
-   "lane": 10
-  },
-  {
-   "name": "whoosh",
-   "start": 36.166666666666664,
-   "vol": 0.4,
-   "lane": 10
-  },
-  {
-   "name": "impact-deep",
-   "start": 38.8,
+   "start": 67.2,
    "vol": 0.5,
-   "lane": 10
-  },
-  {
-   "name": "impact-bass-1",
-   "start": 42.03333333333333,
-   "vol": 0.55,
-   "lane": 10
-  },
-  {
-   "name": "whoosh",
-   "start": 44.2,
-   "vol": 0.45,
-   "lane": 10
-  },
-  {
-   "name": "impact-deep",
-   "start": 47.43333333333333,
-   "vol": 0.55,
-   "lane": 10
-  },
-  {
-   "name": "sparkle",
-   "start": 48.1,
-   "vol": 0.3,
    "lane": 11
   },
   {
    "name": "whoosh-low",
-   "start": 50.1,
+   "start": 68.46666666666667,
    "vol": 0.4,
-   "lane": 10
+   "lane": 13
+  },
+  {
+   "name": "sparkle",
+   "start": 69.13333333333334,
+   "vol": 0.35,
+   "lane": 14
+  },
+  {
+   "name": "pop",
+   "start": 69.43333333333334,
+   "vol": 0.45,
+   "lane": 11
   },
   {
    "name": "whoosh-high",
-   "start": 52.93333333333333,
-   "vol": 0.4,
-   "lane": 10
-  },
-  {
-   "name": "whoosh-high",
-   "start": 56.5,
-   "vol": 0.4,
-   "lane": 10
-  },
-  {
-   "name": "whoosh-low",
-   "start": 58.666666666666664,
-   "vol": 0.45,
-   "lane": 10
-  },
-  {
-   "name": "impact-bass-1",
-   "start": 62.333333333333336,
-   "vol": 0.55,
-   "lane": 10
-  },
-  {
-   "name": "sparkle",
-   "start": 63,
-   "vol": 0.3,
-   "lane": 11
-  },
-  {
-   "name": "impact-deep",
-   "start": 64.9,
-   "vol": 0.5,
-   "lane": 10
-  },
-  {
-   "name": "whoosh-low",
-   "start": 67.5,
-   "vol": 0.4,
-   "lane": 10
-  },
-  {
-   "name": "impact-bass-1",
-   "start": 71.03333333333333,
-   "vol": 0.55,
-   "lane": 10
-  },
-  {
-   "name": "sparkle",
-   "start": 71.7,
-   "vol": 0.3,
-   "lane": 11
-  },
-  {
-   "name": "whoosh",
-   "start": 73.76666666666667,
+   "start": 71.46666666666667,
    "vol": 0.35,
    "lane": 10
   },
   {
+   "name": "whoosh",
+   "start": 71.6,
+   "vol": 0.35,
+   "lane": 11
+  },
+  {
    "name": "impact-bass-1",
-   "start": 75.9,
+   "start": 73.73333333333333,
    "vol": 0.7,
    "lane": 10
   },
   {
    "name": "impact-bass-1",
-   "start": 76.26666666666667,
+   "start": 74.1,
    "vol": 0.75,
    "lane": 11
   },
   {
    "name": "impact-deep",
-   "start": 77.76666666666667,
+   "start": 75.6,
    "vol": 0.8,
    "lane": 12
   },
   {
    "name": "sparkle",
-   "start": 78.06666666666666,
+   "start": 75.9,
    "vol": 0.35,
    "lane": 10
   }

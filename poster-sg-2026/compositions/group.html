@@ -15,23 +15,23 @@
   <div id="root" data-composition-id="group" data-width="1080" data-height="1350">
     <img id="group-bg" src="assets/bg/group.jpg" alt=""/>
     <div id="group-cam" data-layout-allow-overflow><img id="group-img" src="assets/posters/group.jpg" alt=""/></div>
-    <div id="group-top"><div id="group-t1">TAHNIAH!</div><div id="group-t2">MALAYSIA THERAPIST TEAM</div></div>
+    <div id="group-top"><div id="group-t1">TAHNIAH!</div><div id="group-t2">BARISAN WAKIL MALAYSIA</div></div>
     <div id="group-bot"><div id="group-b1">28 – 29 NOV 2026</div><div id="group-b2">HOTEL CHANCELLOR @ ORCHARD · SINGAPORE</div></div>
     <div id="group-flash" data-layout-ignore></div>
   </div>
   <script>
     const tl = gsap.timeline({ paused: true });
     tl.fromTo("#group-flash",{opacity:1},{opacity:0,duration:0.3,ease:"power2.out"},0);
-    tl.fromTo("#group-cam",{"x":-1778.96,"y":-82.68,"scale":2.296},{...{"x":-1530.5,"y":-1.5,"scale":2.05},duration:0.9,ease:"power2.out"},0);
-    tl.to("#group-cam",{...{"x":-580,"y":-45,"scale":2},duration:1.05,ease:"power2.inOut"},0.9);
-    tl.to("#group-cam",{...{"x":-2300,"y":-265,"scale":2},duration:1.05,ease:"power2.inOut"},2);
-    tl.to("#group-cam",{...{"x":-500,"y":-605,"scale":2},duration:1.05,ease:"power2.inOut"},3.1);
-    tl.to("#group-cam",{...{"x":-2260,"y":-765,"scale":2},duration:1.05,ease:"power2.inOut"},4.2);
-    tl.to("#group-cam",{...{"x":0,"y":371.25,"scale":0.563},duration:0.75,ease:"power3.inOut"},5.6);
-    tl.fromTo("#group-t1",{opacity:0,scale:1.8},{opacity:1,scale:1,duration:0.24,ease:"power4.in"},6.15);
-    tl.fromTo("#group-t2",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.2,ease:"power2.out"},6.45);
-    tl.fromTo("#group-b1",{opacity:0,scale:0.4},{opacity:1,scale:1,duration:0.4,ease:"back.out(1.8)"},6.6);
-    tl.fromTo("#group-b2",{opacity:0,y:16},{opacity:1,y:0,duration:0.4,ease:"expo.out"},6.75);
+    tl.fromTo("#group-cam",{"x":-1778.96,"y":-82.68,"scale":2.296},{...{"x":-1530.5,"y":-1.5,"scale":2.05},duration:1,ease:"power2.out"},0);
+    tl.to("#group-cam",{...{"x":-580,"y":-45,"scale":2},duration:0.95,ease:"power2.inOut"},1);
+    tl.to("#group-cam",{...{"x":-2300,"y":-265,"scale":2},duration:0.95,ease:"power2.inOut"},2);
+    tl.to("#group-cam",{...{"x":-500,"y":-605,"scale":2},duration:0.95,ease:"power2.inOut"},3);
+    tl.to("#group-cam",{...{"x":-2260,"y":-765,"scale":2},duration:0.95,ease:"power2.inOut"},4);
+    tl.to("#group-cam",{...{"x":0,"y":371.25,"scale":0.563},duration:0.75,ease:"power3.inOut"},5.75);
+    tl.fromTo("#group-t1",{opacity:0,scale:1.8},{opacity:1,scale:1,duration:0.24,ease:"power4.in"},6.3);
+    tl.fromTo("#group-t2",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.2,ease:"power2.out"},6.6);
+    tl.fromTo("#group-b1",{opacity:0,scale:0.4},{opacity:1,scale:1,duration:0.4,ease:"back.out(1.8)"},6.75);
+    tl.fromTo("#group-b2",{opacity:0,y:16},{opacity:1,y:0,duration:0.4,ease:"expo.out"},6.9);
     tl.to("#group-flash",{opacity:1,duration:0.14,ease:"power2.in"},8.85);
     window.__timelines["group"] = tl;
   </script>
