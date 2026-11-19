@@ -1,0 +1,57 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#030716;}
+    #root .hk-col{position:absolute;top:0;width:360px;}
+    #root .hk-col img{display:block;width:360px;height:540px;}
+    #hook-reel{position:absolute;inset:0;}
+    #hook-dim{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 48%,rgba(3,7,24,.55) 0%,rgba(3,7,24,.88) 70%,rgba(1,3,12,.96) 100%);}
+    #hook-txt{position:absolute;left:0;top:0;width:1080px;height:1350px;}
+    #hook-l1{position:absolute;left:0;top:300px;width:1080px;text-align:center;font:800 44px/1 "MontserratX",sans-serif;letter-spacing:.42em;color:#fff;padding-left:.42em;}
+    #hook-l2{position:absolute;left:0;top:372px;width:1080px;text-align:center;font:900 176px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 0 #5a3a05) drop-shadow(0 0 30px rgba(255,190,60,.45));}
+    #hook-l3{position:absolute;left:0;top:560px;width:1080px;text-align:center;font:900 132px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #5a3a05) drop-shadow(0 0 30px rgba(255,190,60,.45));}
+    #hook-l4{position:absolute;left:0;top:742px;width:1080px;text-align:center;font:400 118px/1 "Anton",sans-serif;color:#fff;letter-spacing:.02em;text-shadow:0 6px 0 #b3001b,0 0 40px rgba(255,40,60,.55);}
+    #hook-chip{position:absolute;left:390px;top:900px;width:300px;height:84px;border-radius:42px;background:linear-gradient(180deg,#ffe48a,#c88a14);box-shadow:0 0 40px rgba(255,200,80,.6);font:900 56px/84px "Cinzel",serif;color:#1a1204;text-align:center;}
+    #hook-l5{position:absolute;left:0;top:1040px;width:1080px;text-align:center;font:800 34px/1.3 "MontserratX",sans-serif;color:#ffe9b0;letter-spacing:.12em;}
+    #hook-flash{position:absolute;inset:0;background:#fff6dc;opacity:0;}
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1350">
+    <div id="hook-reel" data-layout-allow-overflow>
+    <div class="hk-col" id="hook-col0" style="left:0px"><img src="assets/posters/01-marinda-majapin.jpg" alt=""/><img src="assets/posters/04-siti-hamidah.jpg" alt=""/><img src="assets/posters/07-sam-yong.jpg" alt=""/><img src="assets/posters/10-leo-zackery.jpg" alt=""/><img src="assets/posters/13-akmal.jpg" alt=""/><img src="assets/posters/16-shah.jpg" alt=""/><img src="assets/posters/19-lo-mei-nee.jpg" alt=""/></div>
+    <div class="hk-col" id="hook-col1" style="left:360px"><img src="assets/posters/06-norashikin.jpg" alt=""/><img src="assets/posters/09-norzahtuladha.jpg" alt=""/><img src="assets/posters/12-sukri.jpg" alt=""/><img src="assets/posters/15-mohamad.jpg" alt=""/><img src="assets/posters/18-adriana-jane.jpg" alt=""/><img src="assets/posters/02-nurul-ain-najwa.jpg" alt=""/><img src="assets/posters/05-dayang-zarina.jpg" alt=""/></div>
+    <div class="hk-col" id="hook-col2" style="left:720px"><img src="assets/posters/11-izza.jpg" alt=""/><img src="assets/posters/14-qaizil.jpg" alt=""/><img src="assets/posters/17-sherry-soep.jpg" alt=""/><img src="assets/posters/01-marinda-majapin.jpg" alt=""/><img src="assets/posters/04-siti-hamidah.jpg" alt=""/><img src="assets/posters/07-sam-yong.jpg" alt=""/><img src="assets/posters/10-leo-zackery.jpg" alt=""/></div>
+    </div>
+    <div id="hook-dim"></div>
+    <div id="hook-txt" data-layout-allow-overflow>
+      <div id="hook-l1">INILAH</div>
+      <div id="hook-l2">WIRA</div>
+      <div id="hook-l3">MALAYSIA</div>
+      <div id="hook-l4">KE SINGAPORE!</div>
+      <div id="hook-chip">2026</div>
+      <div id="hook-l5"><span class="w">WORLD</span> <span class="w">TRADITIONAL</span> <span class="w">MASSAGE</span><br/><span class="w">CHAMPIONSHIP</span></div>
+    </div>
+    <div id="hook-flash" data-layout-ignore></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // reels: fast at frame 0, decelerating (motion inside the shot)
+    tl.fromTo("#hook-col0",{y:-2300},{y:-700,duration:3.4,ease:"expo.out"},0);
+    tl.fromTo("#hook-col1",{y:-500},{y:-1900,duration:3.4,ease:"expo.out"},0);
+    tl.fromTo("#hook-col2",{y:-2100},{y:-520,duration:3.4,ease:"expo.out"},0);
+    // frame 0 already carries the line (thumbnail = hook)
+    tl.fromTo("#hook-l1",{opacity:1,y:0},{opacity:1,y:0,duration:0.01},0);
+    tl.fromTo("#hook-l2",{scale:1.18,opacity:1},{scale:1,opacity:1,duration:0.4,ease:"expo.out"},0);
+    tl.fromTo("#hook-l3",{scale:1.18,opacity:1},{scale:1,opacity:1,duration:0.45,ease:"expo.out"},0.04);
+    tl.fromTo("#hook-l4",{scale:2.4,opacity:0},{scale:1,opacity:1,duration:0.22,ease:"power4.in"},0.85);
+    tl.fromTo("#hook-txt",{x:0,y:0},{x:-16,y:10,duration:0.034,ease:"none"},1.07)
+      .to("#hook-txt",{x:12,y:-8,duration:0.034,ease:"none"},1.104)
+      .to("#hook-txt",{x:0,y:0,duration:0.06,ease:"power2.out"},1.138);
+    tl.fromTo("#hook-flash",{opacity:0.0},{opacity:0.55,duration:0.03,ease:"none"},1.05)
+      .to("#hook-flash",{opacity:0,duration:0.25,ease:"power2.out"},1.08);
+    tl.fromTo("#hook-chip",{scale:0,opacity:0},{scale:1,opacity:1,duration:0.4,ease:"back.out(2)"},1.55);
+    tl.fromTo("#hook-l5 .w",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.14,stagger:0.08,ease:"power2.out"},1.9);
+    // exit: zoom through the title
+    tl.to("#hook-txt",{scale:2.6,opacity:0,filter:"blur(10px)",duration:0.3,ease:"power3.in"},3.1);
+    tl.to("#hook-reel",{scale:1.4,opacity:0,duration:0.3,ease:"power3.in"},3.1);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

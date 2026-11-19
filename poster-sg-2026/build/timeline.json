@@ -1,0 +1,167 @@
+{
+ "hook": {
+  "dur": 3.4,
+  "slamAt": 0.85,
+  "chipAt": 1.55
+ },
+ "intro": {
+  "dur": 5.3,
+  "b2": 2.3
+ },
+ "group": {
+  "dur": 9.0,
+  "keys": [
+   0.9,
+   2.0,
+   3.1,
+   4.2,
+   5.3,
+   5.6
+  ]
+ },
+ "posters": [
+  {
+   "file": "01-marinda-majapin.jpg",
+   "enter": "assemble",
+   "dur": 3.4,
+   "sparkle": true,
+   "sweepAt": 1.0
+  },
+  {
+   "file": "02-nurul-ain-najwa.jpg",
+   "enter": "whip",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 0.6
+  },
+  {
+   "file": "03-lucia.jpg",
+   "enter": "face",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 1.0
+  },
+  {
+   "file": "04-siti-hamidah.jpg",
+   "enter": "slice",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 0.6
+  },
+  {
+   "file": "05-dayang-zarina.jpg",
+   "enter": "zoomin",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 0.6
+  },
+  {
+   "file": "06-norashikin.jpg",
+   "enter": "flip",
+   "dur": 2.9,
+   "sparkle": true,
+   "sweepAt": 0.6
+  },
+  {
+   "file": "07-sam-yong.jpg",
+   "enter": "face",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 1.0
+  },
+  {
+   "file": "08-roslan.jpg",
+   "enter": "drop",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 0.6
+  },
+  {
+   "file": "09-norzahtuladha.jpg",
+   "enter": "assemble",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 1.0
+  },
+  {
+   "file": "10-leo-zackery.jpg",
+   "enter": "whip",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 0.6
+  },
+  {
+   "file": "11-izza.jpg",
+   "enter": "slice",
+   "dur": 2.9,
+   "sparkle": true,
+   "sweepAt": 0.6
+  },
+  {
+   "file": "12-sukri.jpg",
+   "enter": "flip",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 0.6
+  },
+  {
+   "file": "13-akmal.jpg",
+   "enter": "zoomin",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 0.6
+  },
+  {
+   "file": "14-qaizil.jpg",
+   "enter": "face",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 1.0
+  },
+  {
+   "file": "15-mohamad.jpg",
+   "enter": "whip",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 0.6
+  },
+  {
+   "file": "16-shah.jpg",
+   "enter": "assemble",
+   "dur": 2.9,
+   "sparkle": true,
+   "sweepAt": 1.0
+  },
+  {
+   "file": "17-sherry-soep.jpg",
+   "enter": "drop",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 0.6
+  },
+  {
+   "file": "18-adriana-jane.jpg",
+   "enter": "flip",
+   "dur": 2.9,
+   "sparkle": false,
+   "sweepAt": 0.6
+  },
+  {
+   "file": "19-lo-mei-nee.jpg",
+   "enter": "assemble",
+   "dur": 3.4,
+   "sparkle": true,
+   "sweepAt": 1.0
+  }
+ ],
+ "finale": {
+  "dur": 8.0,
+  "textAt": 1.9
+ },
+ "music": {
+  "file": null,
+  "offset": 0,
+  "volume": 0.8,
+  "fadeOut": 2.5
+ }
+}

@@ -1,0 +1,71 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#030716;}
+    #finale-wall{position:absolute;inset:0;}
+    #root .fn-tile{position:absolute;width:216px;height:324px;}
+    #finale-slot{position:absolute;left:864px;top:999px;width:216px;height:324px;background:linear-gradient(160deg,#0b1b5c,#050b26);border:3px solid #ffd36b;box-sizing:border-box;text-align:center;}
+    #finale-slot b{display:block;margin-top:80px;font:900 64px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+    #finale-slot i{display:block;margin-top:14px;font:800 28px/1.25 "MontserratX",sans-serif;font-style:normal;color:#fff;letter-spacing:.12em;}
+    #finale-dim{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(3,7,24,.72) 0%,rgba(2,5,18,.93) 80%);opacity:0;}
+    #finale-txt{position:absolute;left:0;top:0;width:1080px;height:1350px;}
+    #finale-l1{position:absolute;left:0;top:380px;width:1080px;text-align:center;font:900 112px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #5a3a05) drop-shadow(0 0 26px rgba(255,190,60,.45));}
+    #finale-l2{position:absolute;left:0;top:510px;width:1080px;text-align:center;font:900 104px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #5a3a05) drop-shadow(0 0 26px rgba(255,190,60,.45));}
+    #finale-l3{position:absolute;left:30px;top:665px;width:1020px;text-align:center;font:800 37px/1.4 "MontserratX",sans-serif;color:#fff;letter-spacing:.05em;}
+    #finale-l4{position:absolute;left:0;top:860px;width:1080px;text-align:center;font:400 64px/1 "Anton",sans-serif;color:#fff;letter-spacing:.04em;text-shadow:0 5px 0 #b3001b;}
+    #finale-l5{position:absolute;left:0;top:960px;width:1080px;text-align:center;font:800 30px/1.4 "MontserratX",sans-serif;color:#ffe9b0;letter-spacing:.1em;}
+  </style>
+  <div id="root" data-composition-id="finale" data-width="1080" data-height="1350">
+    <div id="finale-wall" data-layout-allow-overflow>
+      <img class="fn-tile" id="finale-t0" src="assets/posters/01-marinda-majapin.jpg" alt="" style="left:0px;top:27px"/>
+      <img class="fn-tile" id="finale-t1" src="assets/posters/02-nurul-ain-najwa.jpg" alt="" style="left:216px;top:27px"/>
+      <img class="fn-tile" id="finale-t2" src="assets/posters/03-lucia.jpg" alt="" style="left:432px;top:27px"/>
+      <img class="fn-tile" id="finale-t3" src="assets/posters/04-siti-hamidah.jpg" alt="" style="left:648px;top:27px"/>
+      <img class="fn-tile" id="finale-t4" src="assets/posters/05-dayang-zarina.jpg" alt="" style="left:864px;top:27px"/>
+      <img class="fn-tile" id="finale-t5" src="assets/posters/06-norashikin.jpg" alt="" style="left:0px;top:351px"/>
+      <img class="fn-tile" id="finale-t6" src="assets/posters/07-sam-yong.jpg" alt="" style="left:216px;top:351px"/>
+      <img class="fn-tile" id="finale-t7" src="assets/posters/08-roslan.jpg" alt="" style="left:432px;top:351px"/>
+      <img class="fn-tile" id="finale-t8" src="assets/posters/09-norzahtuladha.jpg" alt="" style="left:648px;top:351px"/>
+      <img class="fn-tile" id="finale-t9" src="assets/posters/10-leo-zackery.jpg" alt="" style="left:864px;top:351px"/>
+      <img class="fn-tile" id="finale-t10" src="assets/posters/11-izza.jpg" alt="" style="left:0px;top:675px"/>
+      <img class="fn-tile" id="finale-t11" src="assets/posters/12-sukri.jpg" alt="" style="left:216px;top:675px"/>
+      <img class="fn-tile" id="finale-t12" src="assets/posters/13-akmal.jpg" alt="" style="left:432px;top:675px"/>
+      <img class="fn-tile" id="finale-t13" src="assets/posters/14-qaizil.jpg" alt="" style="left:648px;top:675px"/>
+      <img class="fn-tile" id="finale-t14" src="assets/posters/15-mohamad.jpg" alt="" style="left:864px;top:675px"/>
+      <img class="fn-tile" id="finale-t15" src="assets/posters/16-shah.jpg" alt="" style="left:0px;top:999px"/>
+      <img class="fn-tile" id="finale-t16" src="assets/posters/17-sherry-soep.jpg" alt="" style="left:216px;top:999px"/>
+      <img class="fn-tile" id="finale-t17" src="assets/posters/18-adriana-jane.jpg" alt="" style="left:432px;top:999px"/>
+      <img class="fn-tile" id="finale-t18" src="assets/posters/19-lo-mei-nee.jpg" alt="" style="left:648px;top:999px"/>
+      <div id="finale-slot"><b>2026</b><i>WIRA<br/>NEGARA</i></div>
+    </div>
+    <div id="finale-dim"></div>
+    <div id="finale-txt" data-layout-allow-overflow>
+      <div id="finale-l1">SEMOGA</div>
+      <div id="finale-l2">BERJAYA!</div>
+      <div id="finale-l3"><span class="w">PULANG</span> <span class="w">DENGAN</span> <span class="w">KEJAYAAN</span> <span class="w">DAN</span><br/><span class="w">MENGHARUMKAN</span> <span class="w">NEGARA</span> <span class="w">YANG</span> <span class="w">TERCINTA</span></div>
+      <div id="finale-l4">MALAYSIA BOLEH!</div>
+      <div id="finale-l5">WORLD TRADITIONAL MASSAGE CHAMPIONSHIP<br/>SINGAPORE · 28 – 29 NOVEMBER 2026</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // seeded scatter so every render is identical
+    let seed = 20261128; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    const order = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
+    order.forEach((n, j) => {
+      const rx = (rnd() - 0.5) * 900, ry = (rnd() - 0.5) * 900, rr = (rnd() - 0.5) * 60;
+      tl.fromTo("#finale-t" + n, {x: rx, y: ry, rotation: rr, scale: 0, opacity: 0}, {x: 0, y: 0, rotation: 0, scale: 1, opacity: 1, duration: 0.5, ease: "expo.out"}, 0.05 + j * 0.045);
+    });
+    tl.fromTo("#finale-slot",{scale:0,opacity:0},{scale:1,opacity:1,duration:0.45,ease:"back.out(1.8)"},0.95);
+    tl.fromTo("#finale-wall",{scale:1},{scale:1.12,duration:6.4,ease:"power1.inOut"},1.6);
+    tl.fromTo("#finale-dim",{opacity:0},{opacity:1,duration:0.5,ease:"power2.inOut"},1.5);
+    tl.fromTo("#finale-l1",{opacity:0,scale:1.9},{opacity:1,scale:1,duration:0.24,ease:"power4.in"},1.9);
+    tl.fromTo("#finale-l2",{opacity:0,scale:1.9},{opacity:1,scale:1,duration:0.24,ease:"power4.in"},2.26);
+    tl.fromTo("#finale-txt",{x:0,y:0},{x:-12,y:8,duration:0.034,ease:"none"},2.5)
+      .to("#finale-txt",{x:9,y:-6,duration:0.034,ease:"none"},2.534)
+      .to("#finale-txt",{x:0,y:0,duration:0.06,ease:"power2.out"},2.568);
+    tl.fromTo("#finale-l3 .w",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.14,stagger:0.08,ease:"power2.out"},2.75);
+    tl.fromTo("#finale-l4",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},3.8);
+    tl.fromTo("#finale-l5",{opacity:0,y:16},{opacity:1,y:0,duration:0.45,ease:"expo.out"},4.2);
+    window.__timelines["finale"] = tl;
+  </script>
+</template>

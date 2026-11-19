@@ -1,0 +1,57 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#030716;}
+    #intro-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75;}
+    #intro-rays{position:absolute;left:-560px;top:-400px;width:2200px;height:2200px;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(255,210,110,.16) 0deg 5deg,rgba(255,210,110,0) 5deg 15deg);}
+    #intro-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 46%,rgba(255,196,80,.30) 0%,rgba(10,18,60,.0) 45%,rgba(2,5,20,.85) 100%);}
+    #intro-a{position:absolute;left:0;top:0;width:1080px;height:1350px;}
+    #intro-a1{position:absolute;left:60px;top:420px;width:960px;text-align:center;font:800 50px/1.35 "MontserratX",sans-serif;color:#fff;letter-spacing:.06em;}
+    #intro-a2{position:absolute;left:40px;top:600px;width:1000px;text-align:center;font:900 92px/1.08 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #5a3a05) drop-shadow(0 0 26px rgba(255,190,60,.4));}
+    #intro-b{position:absolute;left:0;top:0;width:1080px;height:1350px;}
+    #intro-b0{position:absolute;left:0;top:300px;width:1080px;text-align:center;font:800 34px/1 "MontserratX",sans-serif;color:#ffe9b0;letter-spacing:.3em;padding-left:.3em;}
+    #intro-b1{position:absolute;left:40px;top:370px;width:1000px;text-align:center;font:900 118px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #5a3a05);}
+    #intro-b2{position:absolute;left:40px;top:500px;width:1000px;text-align:center;font:900 64px/1.1 "Cinzel",serif;color:#fff;text-shadow:0 4px 0 #2a3a80;}
+    #intro-b3{position:absolute;left:40px;top:650px;width:1000px;text-align:center;font:900 92px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #5a3a05);}
+    #intro-line{position:absolute;left:190px;top:790px;width:700px;height:4px;background:linear-gradient(90deg,rgba(255,214,110,0),#ffd66e,rgba(255,214,110,0));}
+    #intro-c1,#intro-c2{position:absolute;left:70px;width:940px;height:86px;border-radius:14px;border:2px solid #ffd36b;background:rgba(6,14,48,.82);font:800 34px/86px "MontserratX",sans-serif;color:#fff;text-align:center;letter-spacing:.04em;}
+    #intro-c1{top:840px;} #intro-c2{top:950px;}
+    #intro-c1 b,#intro-c2 b{color:#ffd66e;}
+  </style>
+  <div id="root" data-composition-id="intro" data-width="1080" data-height="1350">
+    <img id="intro-bg" src="assets/bg/group.jpg" alt=""/>
+    <div id="intro-rays" data-layout-ignore></div>
+    <div id="intro-glow"></div>
+    <div id="intro-a">
+      <div id="intro-a1"><span class="w">DENGAN</span> <span class="w">BANGGANYA</span> <span class="w">KAMI</span> <span class="w">PERKENALKAN</span></div>
+      <div id="intro-a2"><span class="w">BARISAN</span> <span class="w">WAKIL</span><br/><span class="w">TERAPIS</span> <span class="w">MALAYSIA</span></div>
+    </div>
+    <div id="intro-b">
+      <div id="intro-b0">KE PENTAS DUNIA</div>
+      <div id="intro-b1">WORLD</div>
+      <div id="intro-b2">TRADITIONAL MASSAGE</div>
+      <div id="intro-b3">CHAMPIONSHIP</div>
+      <div id="intro-line"></div>
+      <div id="intro-c1"><b>TARIKH:</b> 28 – 29 NOVEMBER 2026</div>
+      <div id="intro-c2"><b>VENUE:</b> HOTEL CHANCELLOR @ ORCHARD</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#intro-rays",{rotation:0},{rotation:21.2,duration:5.3,ease:"none"},0);
+    tl.fromTo("#intro-bg",{scale:1.12},{scale:1,duration:5.3,ease:"none"},0);
+    // card A — the reference's voiceover line, as type
+    tl.fromTo("#intro-a1 .w",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.14,stagger:0.09,ease:"power2.out"},0.12);
+    tl.fromTo("#intro-a2 .w",{opacity:0,scale:1.5},{opacity:1,scale:1,duration:0.22,stagger:0.12,ease:"power4.in"},0.5);
+    tl.to("#intro-a",{opacity:0,filter:"blur(8px)",duration:0.18,ease:"power2.in"},2.1);
+    // card B — the event
+    tl.fromTo("#intro-b0",{opacity:0,y:-12},{opacity:1,y:0,duration:0.3,ease:"expo.out"},2.3);
+    tl.fromTo("#intro-b1",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},2.35);
+    tl.fromTo("#intro-b2",{opacity:0,filter:"blur(8px)"},{opacity:1,filter:"blur(0px)",duration:0.18,ease:"power2.out"},2.6);
+    tl.fromTo("#intro-b3",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},2.75);
+    tl.fromTo("#intro-line",{scaleX:0},{scaleX:1,duration:0.5,ease:"expo.out"},3);
+    tl.fromTo("#intro-c1",{opacity:0,x:-60},{opacity:1,x:0,duration:0.45,ease:"expo.out"},3.15);
+    tl.fromTo("#intro-c2",{opacity:0,x:60},{opacity:1,x:0,duration:0.45,ease:"expo.out"},3.27);
+    tl.to("#intro-b",{scale:1.8,opacity:0,filter:"blur(10px)",duration:0.25,ease:"power3.in"},5.05);
+    window.__timelines["intro"] = tl;
+  </script>
+</template>

@@ -1,0 +1,53 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#040a22;}
+    #p13-bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+    #p13-shade{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(4,10,34,0) 40%,rgba(2,5,18,.75) 100%);}
+    #p13-cam{position:absolute;inset:0;}
+    #p13-card{position:absolute;left:90px;top:0;width:900px;height:1350px;overflow:hidden;box-shadow:0 0 60px rgba(255,200,80,.35);}
+    #root .band,#root .strip{position:absolute;inset:0;background-size:900px 1350px;background-repeat:no-repeat;}
+    #p13-shk{position:absolute;inset:0;}
+    #p13-tahniah{transform-origin:50% 45.7%;}
+    #p13-sweep{position:absolute;top:-25%;left:0;width:300px;height:150%;background:linear-gradient(90deg,rgba(255,240,200,0) 0%,rgba(255,244,210,.55) 50%,rgba(255,240,200,0) 100%);mix-blend-mode:screen;}
+    #p13-edgeL,#p13-edgeR{position:absolute;top:0;width:3px;height:1350px;background:linear-gradient(180deg,rgba(255,215,110,0),#ffd56a 20%,#fff1b8 50%,#ffd56a 80%,rgba(255,215,110,0));}
+    #p13-edgeL{left:87px;} #p13-edgeR{left:990px;}
+    #p13-tag{position:absolute;right:12px;top:22px;width:66px;font:800 26px/1 "MontserratX",sans-serif;color:#ffe08a;text-align:center;letter-spacing:.02em;}
+    #p13-tag small{display:block;font-size:13px;color:rgba(255,255,255,.7);margin-top:4px;}
+    #p13-flash{position:absolute;inset:0;background:#fff8e6;opacity:0;}
+  </style>
+  <div id="root" data-composition-id="p13" data-width="1080" data-height="1350">
+    <img id="p13-bgimg" src="assets/bg/13-akmal.jpg" alt=""/>
+    <div id="p13-shade"></div>
+    <div id="p13-cam" data-layout-allow-overflow><div id="p13-shk" data-layout-allow-overflow>
+      <div id="p13-edgeL"></div><div id="p13-edgeR"></div>
+      <div id="p13-card" data-layout-allow-overflow>
+        <div class="band" id="p13-hero" style="clip-path:inset(0% 0 65.4% 0);background-image:url('assets/posters/13-akmal.jpg')"></div>
+          <div class="band" id="p13-name" style="clip-path:inset(34.6% 0 59.4% 0);background-image:url('assets/posters/13-akmal.jpg')"></div>
+          <div class="band" id="p13-tahniah" style="clip-path:inset(40.6% 0 49.2% 0);background-image:url('assets/posters/13-akmal.jpg')"></div>
+          <div class="band" id="p13-country" style="clip-path:inset(50.8% 0 31.4% 0);background-image:url('assets/posters/13-akmal.jpg')"></div>
+          <div class="band" id="p13-event" style="clip-path:inset(68.6% 0 23.4% 0);background-image:url('assets/posters/13-akmal.jpg')"></div>
+          <div class="band" id="p13-foot" style="clip-path:inset(76.6% 0 0% 0);background-image:url('assets/posters/13-akmal.jpg')"></div>
+        <div id="p13-sweep"></div>
+      </div>
+    </div></div>
+    <div id="p13-tag" data-layout-ignore>13<small>/19</small></div>
+    <div id="p13-flash" data-layout-ignore></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const shake = (t) => {
+      tl.fromTo("#p13-shk",{x:0,y:0},{x:-14,y:9,duration:0.034,ease:"none"},t)
+        .to("#p13-shk",{x:11,y:-8,duration:0.034,ease:"none"},t+0.034)
+        .to("#p13-shk",{x:-6,y:4,duration:0.034,ease:"none"},t+0.068)
+        .to("#p13-shk",{x:0,y:0,duration:0.05,ease:"power2.out"},t+0.102);
+    };
+    tl.set("#p13-flash",{opacity:0},0);
+    tl.fromTo("#p13-tag",{opacity:0,y:-10},{opacity:1,y:0,duration:0.3,ease:"expo.out"},0.35);
+    
+    tl.fromTo("#p13-cam",{scale:0.62,opacity:0,filter:"blur(14px)"},{scale:1,opacity:1,filter:"blur(0px)",duration:0.5,ease:"expo.out"},0);
+    tl.fromTo("#p13-sweep",{x:-420,rotation:16},{x:1300,rotation:16,duration:0.85,ease:"power2.inOut"},0.6);
+    tl.fromTo("#p13-bgimg",{scale:1.08},{scale:1.0,duration:2.9,ease:"none"},0);
+    tl.to("#p13-flash",{opacity:1,duration:0.14,ease:"power2.in"},2.75);
+    window.__timelines["p13"] = tl;
+  </script>
+</template>
