@@ -1,0 +1,451 @@
+{
+ "offset": 1.45,
+ "end": 152.95,
+ "music": {
+  "file": "assets/music/mtt-anthem.mp3",
+  "volume": 1.0
+ },
+ "sfxGain": 1.0,
+ "scenes": {
+  "teaser": [
+   1.45,
+   13.6
+  ],
+  "chant": [
+   13.6,
+   20.4
+  ],
+  "event": [
+   20.4,
+   26.2
+  ],
+  "group": [
+   26.2,
+   50.66
+  ],
+  "juara1": [
+   50.66,
+   53.775
+  ],
+  "postersA": [
+   53.775,
+   109.69
+  ],
+  "juara2": [
+   109.69,
+   112.795
+  ],
+  "postersB": [
+   112.7,
+   124.2
+  ],
+  "finale": [
+   124.2,
+   152.95
+  ]
+ },
+ "chant": {
+  "words": [
+   13.72,
+   15.12,
+   16.52,
+   17.14,
+   19.04
+  ]
+ },
+ "group": {
+  "keys": [
+   {
+    "t": 0,
+    "p": [
+     420,
+     170
+    ],
+    "s": 2.0
+   },
+   {
+    "t": 2.0,
+    "p": [
+     620,
+     190
+    ],
+    "s": 2.3
+   },
+   {
+    "t": 4.0,
+    "p": [
+     1055,
+     190
+    ],
+    "s": 2.3
+   },
+   {
+    "t": 6.0,
+    "p": [
+     1055,
+     355
+    ],
+    "s": 2.3
+   },
+   {
+    "t": 8.0,
+    "p": [
+     505,
+     355
+    ],
+    "s": 2.3
+   },
+   {
+    "t": 10.0,
+    "p": [
+     480,
+     520
+    ],
+    "s": 2.3
+   },
+   {
+    "t": 12.0,
+    "p": [
+     965,
+     520
+    ],
+    "s": 2.3
+   },
+   {
+    "t": 14.0,
+    "p": [
+     965,
+     690
+    ],
+    "s": 2.3
+   },
+   {
+    "t": 15.8,
+    "p": [
+     480,
+     690
+    ],
+    "s": 2.3
+   }
+  ],
+  "pullAt": 43.55,
+  "land": 44.32
+ },
+ "juara1": {
+  "words": [
+   51.04,
+   51.7,
+   52.4,
+   52.72
+  ]
+ },
+ "juara2": {
+  "words": [
+   110.04,
+   110.72,
+   111.58,
+   111.92
+  ]
+ },
+ "finale": {
+  "words": [
+   130.14,
+   131.54,
+   132.94
+  ],
+  "endcard": 142.7,
+  "boleh": 150.0
+ },
+ "lyrics": [
+  {
+   "words": [
+    [
+     "MALAYSIA",
+     44.32
+    ],
+    [
+     "BERDIRI",
+     45.48
+    ],
+    [
+     "MEGAH",
+     46.82
+    ]
+   ],
+   "end": 47.45
+  },
+  {
+   "words": [
+    [
+     "MENYENTUH",
+     47.54
+    ],
+    [
+     "DUNIA",
+     48.42
+    ],
+    [
+     "DENGAN",
+     49.28
+    ],
+    [
+     "JIWA",
+     49.56
+    ]
+   ],
+   "end": 50.5
+  },
+  {
+   "words": [
+    [
+     "SUARA",
+     54.0
+    ],
+    [
+     "DUNIA",
+     54.38
+    ],
+    [
+     "DENGAR",
+     54.98
+    ],
+    [
+     "NAMA",
+     55.52
+    ],
+    [
+     "KITA",
+     56.2
+    ]
+   ],
+   "end": 56.85
+  },
+  {
+   "words": [
+    [
+     "MALAYSIA",
+     56.98
+    ],
+    [
+     "THERAPISTS",
+     58.04
+    ],
+    [
+     "TEAM",
+     59.5
+    ]
+   ],
+   "end": 60.0
+  },
+  {
+   "words": [
+    [
+     "BERSATU",
+     60.08
+    ],
+    [
+     "TENAGA",
+     61.24
+    ]
+   ],
+   "end": 62.25
+  },
+  {
+   "words": [
+    [
+     "DI",
+     62.34
+    ],
+    [
+     "PERSADA",
+     63.2
+    ],
+    [
+     "DUNIA",
+     65.18
+    ]
+   ],
+   "end": 67.1
+  },
+  {
+   "words": [
+    [
+     "KITA",
+     67.22
+    ],
+    [
+     "BERSINAR",
+     69.24
+    ],
+    [
+     "SELAMANYA",
+     70.44
+    ]
+   ],
+   "end": 72.3
+  },
+  {
+   "words": [
+    [
+     "MALAYSIA",
+     107.6
+    ],
+    [
+     "TERUKIR",
+     108.52
+    ],
+    [
+     "ABADI",
+     109.26
+    ]
+   ],
+   "end": 109.55
+  },
+  {
+   "words": [
+    [
+     "SENTUHAN",
+     112.8
+    ],
+    [
+     "SUCI",
+     113.72
+    ],
+    [
+     "DARI",
+     114.2
+    ],
+    [
+     "JIWA",
+     114.48
+    ],
+    [
+     "BANGSA",
+     115.42
+    ]
+   ],
+   "end": 116.5
+  },
+  {
+   "words": [
+    [
+     "MTT",
+     116.6
+    ],
+    [
+     "BERDIRI",
+     117.2
+    ],
+    [
+     "DI",
+     117.94
+    ],
+    [
+     "PUNCAK",
+     118.08
+    ],
+    [
+     "DUNIA",
+     118.5
+    ]
+   ],
+   "end": 119.2
+  },
+  {
+   "words": [
+    [
+     "MEMBAWA",
+     119.3
+    ],
+    [
+     "DAMAI,",
+     120.04
+    ],
+    [
+     "MEMBAWA",
+     120.6
+    ],
+    [
+     "CAHAYA",
+     121.26
+    ]
+   ],
+   "end": 122.4
+  }
+ ],
+ "posters": [
+  {
+   "file": "01-shah.jpg",
+   "enter": "assemble"
+  },
+  {
+   "file": "02-mohamad.jpg",
+   "enter": "whip"
+  },
+  {
+   "file": "03-rex.jpg",
+   "enter": "face",
+   "cw": 1080
+  },
+  {
+   "file": "04-akmal.jpg",
+   "enter": "slice"
+  },
+  {
+   "file": "05-sukri.jpg",
+   "enter": "zoomin"
+  },
+  {
+   "file": "06-sherry-soep.jpg",
+   "enter": "flip"
+  },
+  {
+   "file": "07-lynd-a-robert.jpg",
+   "enter": "drop"
+  },
+  {
+   "file": "08-adriana-jane.jpg",
+   "enter": "face"
+  },
+  {
+   "file": "09-marinda-majapin.jpg",
+   "enter": "assemble"
+  },
+  {
+   "file": "10-lucia.jpg",
+   "enter": "whip"
+  },
+  {
+   "file": "11-izza.jpg",
+   "enter": "slice"
+  },
+  {
+   "file": "12-norashikin.jpg",
+   "enter": "flip"
+  },
+  {
+   "file": "13-siti-hamidah.jpg",
+   "enter": "zoomin"
+  },
+  {
+   "file": "14-rias.jpg",
+   "enter": "face"
+  },
+  {
+   "file": "15-leo-zackery.jpg",
+   "enter": "assemble"
+  },
+  {
+   "file": "16-qaizil.jpg",
+   "enter": "drop"
+  },
+  {
+   "file": "17-roslan.jpg",
+   "enter": "whip"
+  },
+  {
+   "file": "18-sam-yong.jpg",
+   "enter": "assemble"
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#040a22;}
+    #p06-bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+    #p06-shade{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(4,10,34,0) 40%,rgba(2,5,18,.75) 100%);}
+    #p06-cam{position:absolute;inset:0;}
+    #p06-card{position:absolute;left:90px;top:0;width:900px;height:1350px;overflow:hidden;box-shadow:0 0 60px rgba(255,200,80,.35);}
+    #root .band,#root .strip{position:absolute;inset:0;background-size:900px 1350px;background-repeat:no-repeat;}
+    #p06-pun{position:absolute;inset:0;transform-origin:50% 30%;}
+    #p06-shk{position:absolute;inset:0;}
+    #p06-tahniah{transform-origin:50% 45.7%;}
+    #p06-sweep{position:absolute;top:-25%;left:0;width:300px;height:150%;background:linear-gradient(90deg,rgba(255,240,200,0) 0%,rgba(255,244,210,.55) 50%,rgba(255,240,200,0) 100%);mix-blend-mode:screen;}
+    #p06-edgeL,#p06-edgeR{position:absolute;top:0;width:3px;height:1350px;background:linear-gradient(180deg,rgba(255,215,110,0),#ffd56a 20%,#fff1b8 50%,#ffd56a 80%,rgba(255,215,110,0));}
+    #p06-edgeL{left:87px;} #p06-edgeR{left:990px;}
+    #p06-tag{position:absolute;right:12px;top:22px;width:66px;font:800 26px/1 "MontserratX",sans-serif;color:#ffe08a;text-align:center;letter-spacing:.02em;}
+    #p06-tag small{display:block;font-size:13px;color:rgba(255,255,255,.7);margin-top:4px;}
+    #p06-flash{position:absolute;inset:0;background:#fff8e6;opacity:0;}
+  </style>
+  <div id="root" data-composition-id="p06" data-width="1080" data-height="1350">
+    <img id="p06-bgimg" src="assets/bg/06-sherry-soep.jpg" alt=""/>
+    <div id="p06-shade"></div>
+    <div id="p06-cam" data-layout-allow-overflow><div id="p06-pun" data-layout-allow-overflow><div id="p06-shk" data-layout-allow-overflow>
+      <div id="p06-edgeL"></div><div id="p06-edgeR"></div>
+      <div id="p06-card" data-layout-allow-overflow>
+        <div class="band" id="p06-hero" style="clip-path:inset(0% 0 65.4% 0);background-image:url('assets/posters/06-sherry-soep.jpg')"></div>
+          <div class="band" id="p06-name" style="clip-path:inset(34.6% 0 59.4% 0);background-image:url('assets/posters/06-sherry-soep.jpg')"></div>
+          <div class="band" id="p06-tahniah" style="clip-path:inset(40.6% 0 49.2% 0);background-image:url('assets/posters/06-sherry-soep.jpg')"></div>
+          <div class="band" id="p06-country" style="clip-path:inset(50.8% 0 31.4% 0);background-image:url('assets/posters/06-sherry-soep.jpg')"></div>
+          <div class="band" id="p06-event" style="clip-path:inset(68.6% 0 23.4% 0);background-image:url('assets/posters/06-sherry-soep.jpg')"></div>
+          <div class="band" id="p06-foot" style="clip-path:inset(76.6% 0 0% 0);background-image:url('assets/posters/06-sherry-soep.jpg')"></div>
+        <div id="p06-sweep"></div>
+      </div>
+    </div></div></div>
+    <div id="p06-tag" data-layout-ignore>06<small>/18</small></div>
+    <div id="p06-flash" data-layout-ignore></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const shake = (t) => {
+      tl.fromTo("#p06-shk",{x:0,y:0},{x:-14,y:9,duration:0.034,ease:"none"},t)
+        .to("#p06-shk",{x:11,y:-8,duration:0.034,ease:"none"},t+0.034)
+        .to("#p06-shk",{x:-6,y:4,duration:0.034,ease:"none"},t+0.068)
+        .to("#p06-shk",{x:0,y:0,duration:0.05,ease:"power2.out"},t+0.102);
+    };
+    tl.set("#p06-flash",{opacity:0},0);
+    tl.fromTo("#p06-tag",{opacity:0,y:-10},{opacity:1,y:0,duration:0.3,ease:"expo.out"},0.35);
+    
+    tl.fromTo("#p06-card",{rotationY:-92,transformPerspective:1400},{rotationY:0,transformPerspective:1400,duration:0.62,ease:"back.out(1.3)"},0);
+    tl.fromTo("#p06-sweep",{x:-420,rotation:16},{x:1300,rotation:16,duration:0.85,ease:"power2.inOut"},0.6);
+    tl.fromTo("#p06-bgimg",{scale:1.08},{scale:1.0,duration:3.9,ease:"none"},0);
+    tl.fromTo("#p06-pun",{scale:1},{scale:1.22,duration:0.38,ease:"power3.inOut"},1.95);
+    tl.to("#p06-pun",{scale:1,duration:0.42,ease:"power3.inOut"},3.05);
+    tl.to("#p06-cam",{y:1350,filter:"blur(14px)",duration:0.2,ease:"power3.in"},3.7);
+    window.__timelines["p06"] = tl;
+  </script>
+</template>

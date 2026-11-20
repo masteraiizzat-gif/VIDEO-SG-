@@ -1,0 +1,146 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#02040f;}
+    #tz-wall{position:absolute;inset:0;}
+    #tz-grid{position:absolute;left:0;top:0;width:1080px;height:1350px;}
+    #root .tz-tile{position:absolute;width:360px;height:225px;opacity:.55;}
+    #tz-sel{position:absolute;left:0;top:0;width:360px;height:225px;border:5px solid #ffd66e;box-shadow:0 0 30px rgba(255,200,80,.8),inset 0 0 24px rgba(255,200,80,.5);opacity:0;}
+    #tz-dim{position:absolute;inset:0;background:radial-gradient(ellipse 70% 30% at 50% 50%,rgba(2,4,15,.92) 0%,rgba(2,4,15,.6) 60%,rgba(2,4,15,.2) 100%);}
+    #tz-txt{position:absolute;left:0;top:0;width:1080px;height:1350px;}
+    #tz-l1{position:absolute;left:0;top:470px;width:1080px;text-align:center;font:900 210px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 0 #5a3a05) drop-shadow(0 0 36px rgba(255,190,60,.5));}
+    #tz-l2{position:absolute;left:0;top:700px;width:1080px;text-align:center;font:800 40px/1 "MontserratX",sans-serif;color:#fff;letter-spacing:.24em;padding-left:.24em;}
+    #tz-l3{position:absolute;left:0;top:775px;width:1080px;text-align:center;font:400 96px/1 "Anton",sans-serif;color:#fff;text-shadow:0 6px 0 #b3001b,0 0 40px rgba(255,40,60,.5);}
+    #root .tz-s{position:absolute;inset:0;opacity:0;}
+    #root .tz-sbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+    #root .tz-sp{position:absolute;top:0;height:1350px;box-shadow:0 0 60px rgba(255,200,80,.35);}
+    #tz-words{position:absolute;left:0;top:0;width:1080px;height:1350px;}
+    #root .tz-w{position:absolute;left:0;top:500px;width:1080px;padding:40px 0;background:linear-gradient(180deg,rgba(3,6,20,0),rgba(3,6,20,.82) 18%,rgba(3,6,20,.82) 82%,rgba(3,6,20,0));text-align:center;font:400 150px/1.05 "Anton",sans-serif;color:#fff;letter-spacing:.02em;text-shadow:0 8px 0 #b3001b,0 0 50px rgba(0,0,0,.9),0 0 90px rgba(0,0,0,.8);opacity:0;}
+    #tz-glow{position:absolute;left:140px;top:275px;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(255,236,170,.95) 0%,rgba(255,190,70,.45) 30%,rgba(255,170,40,0) 70%);opacity:0;}
+    #tz-flash{position:absolute;inset:0;background:#fff6dc;opacity:0;}
+  </style>
+  <div id="root" data-composition-id="teaser" data-width="1080" data-height="1350">
+    <div id="tz-wall" data-layout-allow-overflow>
+      <div id="tz-grid">
+      <img class="tz-tile" id="tz-t0" src="assets/tiles/01-shah.jpg" alt="" style="left:0px;top:0px"/>
+      <img class="tz-tile" id="tz-t1" src="assets/tiles/02-mohamad.jpg" alt="" style="left:360px;top:0px"/>
+      <img class="tz-tile" id="tz-t2" src="assets/tiles/03-rex.jpg" alt="" style="left:720px;top:0px"/>
+      <img class="tz-tile" id="tz-t3" src="assets/tiles/04-akmal.jpg" alt="" style="left:0px;top:225px"/>
+      <img class="tz-tile" id="tz-t4" src="assets/tiles/05-sukri.jpg" alt="" style="left:360px;top:225px"/>
+      <img class="tz-tile" id="tz-t5" src="assets/tiles/06-sherry-soep.jpg" alt="" style="left:720px;top:225px"/>
+      <img class="tz-tile" id="tz-t6" src="assets/tiles/07-lynd-a-robert.jpg" alt="" style="left:0px;top:450px"/>
+      <img class="tz-tile" id="tz-t7" src="assets/tiles/08-adriana-jane.jpg" alt="" style="left:360px;top:450px"/>
+      <img class="tz-tile" id="tz-t8" src="assets/tiles/09-marinda-majapin.jpg" alt="" style="left:720px;top:450px"/>
+      <img class="tz-tile" id="tz-t9" src="assets/tiles/10-lucia.jpg" alt="" style="left:0px;top:675px"/>
+      <img class="tz-tile" id="tz-t10" src="assets/tiles/11-izza.jpg" alt="" style="left:360px;top:675px"/>
+      <img class="tz-tile" id="tz-t11" src="assets/tiles/12-norashikin.jpg" alt="" style="left:720px;top:675px"/>
+      <img class="tz-tile" id="tz-t12" src="assets/tiles/13-siti-hamidah.jpg" alt="" style="left:0px;top:900px"/>
+      <img class="tz-tile" id="tz-t13" src="assets/tiles/14-rias.jpg" alt="" style="left:360px;top:900px"/>
+      <img class="tz-tile" id="tz-t14" src="assets/tiles/15-leo-zackery.jpg" alt="" style="left:720px;top:900px"/>
+      <img class="tz-tile" id="tz-t15" src="assets/tiles/16-qaizil.jpg" alt="" style="left:0px;top:1125px"/>
+      <img class="tz-tile" id="tz-t16" src="assets/tiles/17-roslan.jpg" alt="" style="left:360px;top:1125px"/>
+      <img class="tz-tile" id="tz-t17" src="assets/tiles/18-sam-yong.jpg" alt="" style="left:720px;top:1125px"/>
+      <div id="tz-sel"></div>
+      </div>
+      <div id="tz-dim"></div>
+      <div id="tz-txt" data-layout-allow-overflow>
+        <div id="tz-l1">18 WIRA</div>
+        <div id="tz-l2">MALAYSIA THERAPISTS TEAM</div>
+        <div id="tz-l3">KE SINGAPORE 2026!</div>
+      </div>
+    </div>
+    <div class="tz-s" id="tz-s0"><img class="tz-sbg" src="assets/bg/01-shah.jpg" alt=""/><img class="tz-sp" src="assets/posters/01-shah.jpg" alt="" style="left:90px;width:900px"/></div>
+    <div class="tz-s" id="tz-s1"><img class="tz-sbg" src="assets/bg/06-sherry-soep.jpg" alt=""/><img class="tz-sp" src="assets/posters/06-sherry-soep.jpg" alt="" style="left:90px;width:900px"/></div>
+    <div class="tz-s" id="tz-s2"><img class="tz-sbg" src="assets/bg/10-lucia.jpg" alt=""/><img class="tz-sp" src="assets/posters/10-lucia.jpg" alt="" style="left:90px;width:900px"/></div>
+    <div class="tz-s" id="tz-s3"><img class="tz-sbg" src="assets/bg/14-rias.jpg" alt=""/><img class="tz-sp" src="assets/posters/14-rias.jpg" alt="" style="left:90px;width:900px"/></div>
+    <div class="tz-s" id="tz-s4"><img class="tz-sbg" src="assets/bg/03-rex.jpg" alt=""/><img class="tz-sp" src="assets/posters/03-rex.jpg" alt="" style="left:0px;width:1080px"/></div>
+    <div class="tz-s" id="tz-s5"><img class="tz-sbg" src="assets/bg/08-adriana-jane.jpg" alt=""/><img class="tz-sp" src="assets/posters/08-adriana-jane.jpg" alt="" style="left:90px;width:900px"/></div>
+    <div class="tz-s" id="tz-s6"><img class="tz-sbg" src="assets/bg/16-qaizil.jpg" alt=""/><img class="tz-sp" src="assets/posters/16-qaizil.jpg" alt="" style="left:90px;width:900px"/></div>
+    <div class="tz-s" id="tz-s7"><img class="tz-sbg" src="assets/bg/12-norashikin.jpg" alt=""/><img class="tz-sp" src="assets/posters/12-norashikin.jpg" alt="" style="left:90px;width:900px"/></div>
+    <div id="tz-words" data-layout-allow-overlap>
+      <div class="tz-w" id="tz-w0">SATU<br/>PASUKAN.</div>
+      <div class="tz-w" id="tz-w1">SATU<br/>MISI.</div>
+      <div class="tz-w" id="tz-w2">SATU<br/>MALAYSIA!</div>
+    </div>
+    <div id="tz-glow" data-layout-ignore></div>
+    <div id="tz-flash" data-layout-ignore></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#tz-grid",{scale:1.0},{scale:1.12,duration:4.815,ease:"none"},0);
+    tl.set("#tz-sel",{x:360,y:225},0);
+    tl.fromTo("#tz-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},0);
+    tl.fromTo("#tz-t4",{opacity:1},{opacity:0.55,duration:0.38,ease:"power2.in"},0);
+    tl.set("#tz-sel",{x:0,y:675},0.495);
+    tl.fromTo("#tz-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},0.495);
+    tl.fromTo("#tz-t9",{opacity:1},{opacity:0.55,duration:0.38,ease:"power2.in"},0.495);
+    tl.set("#tz-sel",{x:360,y:0},0.895);
+    tl.fromTo("#tz-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},0.895);
+    tl.fromTo("#tz-t1",{opacity:1},{opacity:0.55,duration:0.38,ease:"power2.in"},0.895);
+    tl.set("#tz-sel",{x:360,y:900},1.295);
+    tl.fromTo("#tz-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},1.295);
+    tl.fromTo("#tz-t13",{opacity:1},{opacity:0.55,duration:0.38,ease:"power2.in"},1.295);
+    tl.set("#tz-sel",{x:360,y:450},1.685);
+    tl.fromTo("#tz-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},1.685);
+    tl.fromTo("#tz-t7",{opacity:1},{opacity:0.55,duration:0.38,ease:"power2.in"},1.685);
+    tl.set("#tz-sel",{x:360,y:1125},2.075);
+    tl.fromTo("#tz-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},2.075);
+    tl.fromTo("#tz-t16",{opacity:1},{opacity:0.55,duration:0.38,ease:"power2.in"},2.075);
+    tl.set("#tz-sel",{x:0,y:225},2.435);
+    tl.fromTo("#tz-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},2.435);
+    tl.fromTo("#tz-t3",{opacity:1},{opacity:0.55,duration:0.38,ease:"power2.in"},2.435);
+    tl.set("#tz-sel",{x:720,y:675},2.835);
+    tl.fromTo("#tz-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},2.835);
+    tl.fromTo("#tz-t11",{opacity:1},{opacity:0.55,duration:0.38,ease:"power2.in"},2.835);
+    tl.set("#tz-sel",{x:0,y:0},3.235);
+    tl.fromTo("#tz-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},3.235);
+    tl.fromTo("#tz-t0",{opacity:1},{opacity:0.55,duration:0.38,ease:"power2.in"},3.235);
+    tl.set("#tz-sel",{x:720,y:900},3.615);
+    tl.fromTo("#tz-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},3.615);
+    tl.fromTo("#tz-t14",{opacity:1},{opacity:0.55,duration:0.38,ease:"power2.in"},3.615);
+    tl.set("#tz-sel",{x:0,y:450},4.015);
+    tl.fromTo("#tz-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},4.015);
+    tl.fromTo("#tz-t6",{opacity:1},{opacity:0.55,duration:0.38,ease:"power2.in"},4.015);
+    tl.set("#tz-sel",{x:360,y:675},4.405);
+    tl.fromTo("#tz-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},4.405);
+    tl.fromTo("#tz-t10",{opacity:1},{opacity:0.55,duration:0.38,ease:"power2.in"},4.405);
+    tl.fromTo("#tz-l1",{scale:1.15,opacity:1},{scale:1,opacity:1,duration:0.4,ease:"expo.out"},0);
+    tl.fromTo("#tz-l2",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.2,ease:"power2.out"},0.3);
+    tl.fromTo("#tz-l3",{opacity:0,scale:2.2},{opacity:1,scale:1,duration:0.2,ease:"power4.in"},1.875);
+    tl.fromTo("#tz-txt",{x:0,y:0},{x:-14,y:8.4,duration:0.034,ease:"none"},2.075).to("#tz-txt",{x:10.5,y:-7,duration:0.034,ease:"none"},2.109).to("#tz-txt",{x:0,y:0,duration:0.06,ease:"power2.out"},2.143);
+    tl.fromTo("#tz-flash",{opacity:0},{opacity:0.45,duration:0.03,ease:"none"},2.045).to("#tz-flash",{opacity:0,duration:0.28,ease:"power2.out"},2.075);
+    tl.to("#tz-wall",{scale:2.6,opacity:0,filter:"blur(12px)",duration:0.3,ease:"power3.in"},4.515);
+    tl.fromTo("#tz-s0",{opacity:0},{opacity:1,duration:0.01},4.815);
+    tl.fromTo("#tz-s0 .tz-sp",{x:260,scale:1.08,filter:"blur(14px)"},{x:0,scale:1,filter:"blur(0px)",duration:0.3,ease:"expo.out"},4.815);
+    tl.to("#tz-s0",{opacity:0,duration:0.01},5.555);
+    tl.fromTo("#tz-s1",{opacity:0},{opacity:1,duration:0.01},5.565);
+    tl.fromTo("#tz-s1 .tz-sp",{x:-260,scale:1.08,filter:"blur(14px)"},{x:0,scale:1,filter:"blur(0px)",duration:0.3,ease:"expo.out"},5.565);
+    tl.to("#tz-s1",{opacity:0,duration:0.01},6.355);
+    tl.fromTo("#tz-s2",{opacity:0},{opacity:1,duration:0.01},6.365);
+    tl.fromTo("#tz-s2 .tz-sp",{x:260,scale:1.08,filter:"blur(14px)"},{x:0,scale:1,filter:"blur(0px)",duration:0.3,ease:"expo.out"},6.365);
+    tl.to("#tz-s2",{opacity:0,duration:0.01},7.125);
+    tl.fromTo("#tz-s3",{opacity:0},{opacity:1,duration:0.01},7.135);
+    tl.fromTo("#tz-s3 .tz-sp",{x:-260,scale:1.08,filter:"blur(14px)"},{x:0,scale:1,filter:"blur(0px)",duration:0.3,ease:"expo.out"},7.135);
+    tl.to("#tz-s3",{opacity:0,duration:0.01},7.915);
+    tl.fromTo("#tz-s4",{opacity:0},{opacity:1,duration:0.01},7.925);
+    tl.fromTo("#tz-s4 .tz-sp",{x:260,scale:1.08,filter:"blur(14px)"},{x:0,scale:1,filter:"blur(0px)",duration:0.3,ease:"expo.out"},7.925);
+    tl.to("#tz-s4",{opacity:0,duration:0.01},8.675);
+    tl.fromTo("#tz-s5",{opacity:0},{opacity:1,duration:0.01},8.685);
+    tl.fromTo("#tz-s5 .tz-sp",{x:-260,scale:1.08,filter:"blur(14px)"},{x:0,scale:1,filter:"blur(0px)",duration:0.3,ease:"expo.out"},8.685);
+    tl.to("#tz-s5",{opacity:0,duration:0.01},9.465);
+    tl.fromTo("#tz-s6",{opacity:0},{opacity:1,duration:0.01},9.475);
+    tl.fromTo("#tz-s6 .tz-sp",{x:260,scale:1.08,filter:"blur(14px)"},{x:0,scale:1,filter:"blur(0px)",duration:0.3,ease:"expo.out"},9.475);
+    tl.to("#tz-s6",{opacity:0,duration:0.01},10.235);
+    tl.fromTo("#tz-s7",{opacity:0},{opacity:1,duration:0.01},10.245);
+    tl.fromTo("#tz-s7 .tz-sp",{x:-260,scale:1.08,filter:"blur(14px)"},{x:0,scale:1,filter:"blur(0px)",duration:0.3,ease:"expo.out"},10.245);
+    tl.to("#tz-s7",{opacity:0,duration:0.01},11.055);
+    tl.fromTo("#tz-w0",{opacity:0,scale:2},{opacity:1,scale:1,duration:0.18,ease:"power4.in"},4.815);
+    tl.to("#tz-w0",{opacity:0,filter:"blur(8px)",duration:0.12,ease:"power2.in"},7.015);
+    tl.fromTo("#tz-w1",{opacity:0,scale:2},{opacity:1,scale:1,duration:0.18,ease:"power4.in"},7.135);
+    tl.to("#tz-w1",{opacity:0,filter:"blur(8px)",duration:0.12,ease:"power2.in"},9.355);
+    tl.fromTo("#tz-w2",{opacity:0,scale:2},{opacity:1,scale:1,duration:0.18,ease:"power4.in"},9.475);
+    tl.to("#tz-w2",{opacity:0,filter:"blur(8px)",duration:0.12,ease:"power2.in"},10.945);
+    tl.fromTo("#tz-glow",{scale:0.2,opacity:0},{scale:1.4,opacity:1,duration:1.102,ease:"power2.in"},11.065);
+
+    window.__timelines["teaser"] = tl;
+  </script>
+</template>

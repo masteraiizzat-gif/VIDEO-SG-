@@ -1,0 +1,45 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#030716;}
+    #ev-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7;}
+    #ev-rays{position:absolute;left:-560px;top:-400px;width:2200px;height:2200px;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(255,210,110,.15) 0deg 5deg,rgba(255,210,110,0) 5deg 15deg);}
+    #ev-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 46%,rgba(255,196,80,.28) 0%,rgba(10,18,60,0) 45%,rgba(2,5,20,.85) 100%);}
+    #ev-b{position:absolute;left:0;top:0;width:1080px;height:1350px;}
+    #ev-b0{position:absolute;left:0;top:250px;width:1080px;text-align:center;font:800 36px/1 "MontserratX",sans-serif;color:#ffe9b0;letter-spacing:.3em;padding-left:.3em;}
+    #ev-b1{position:absolute;left:40px;top:320px;width:1000px;text-align:center;font:900 140px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #5a3a05);}
+    #ev-b2{position:absolute;left:40px;top:475px;width:1000px;text-align:center;font:900 66px/1.1 "Cinzel",serif;color:#fff;text-shadow:0 4px 0 #2a3a80;}
+    #ev-b3{position:absolute;left:40px;top:565px;width:1000px;text-align:center;font:900 98px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #5a3a05);}
+    #ev-chip{position:absolute;left:300px;top:700px;width:480px;height:84px;border-radius:42px;background:linear-gradient(180deg,#ffe48a,#c88a14);box-shadow:0 0 40px rgba(255,200,80,.55);font:900 48px/84px "Cinzel",serif;color:#1a1204;text-align:center;}
+    #ev-c1,#ev-c2{position:absolute;left:70px;width:940px;height:86px;border-radius:14px;border:2px solid #ffd36b;background:rgba(6,14,48,.82);font:800 34px/86px "MontserratX",sans-serif;color:#fff;text-align:center;letter-spacing:.04em;}
+    #ev-c1{top:850px;} #ev-c2{top:960px;}
+    #ev-c1 b,#ev-c2 b{color:#ffd66e;}
+  </style>
+  <div id="root" data-composition-id="event" data-width="1080" data-height="1350">
+    <img id="ev-bg" src="assets/bg/mtt18.jpg" alt=""/>
+    <div id="ev-rays" data-layout-ignore></div>
+    <div id="ev-glow"></div>
+    <div id="ev-b">
+      <div id="ev-b0">KE PENTAS DUNIA</div>
+      <div id="ev-b1">WORLD</div>
+      <div id="ev-b2">TRADITIONAL MASSAGE</div>
+      <div id="ev-b3">CHAMPIONSHIP</div>
+      <div id="ev-chip">SINGAPORE 2026</div>
+      <div id="ev-c1"><b>TARIKH:</b> 28 – 29 NOVEMBER 2026</div>
+      <div id="ev-c2"><b>VENUE:</b> HOTEL CHANCELLOR @ ORCHARD</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#ev-rays",{rotation:0},{rotation:23.333,duration:5.833,ease:"none"},0);
+    tl.fromTo("#ev-bg",{scale:1.12},{scale:1,duration:5.833,ease:"none"},0);
+    tl.fromTo("#ev-b0",{opacity:0,y:-12},{opacity:1,y:0,duration:0.3,ease:"expo.out"},0.05);
+    tl.fromTo("#ev-b1",{opacity:0,scale:1.7},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},0.13);
+    tl.fromTo("#ev-b2",{opacity:0,filter:"blur(8px)"},{opacity:1,filter:"blur(0px)",duration:0.18,ease:"power2.out"},0.5);
+    tl.fromTo("#ev-b3",{opacity:0,scale:1.7},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},0.63);
+    tl.fromTo("#ev-chip",{opacity:0,scale:0.3},{opacity:1,scale:1,duration:0.4,ease:"back.out(2)"},1.15);
+    tl.fromTo("#ev-c1",{opacity:0,x:-60},{opacity:1,x:0,duration:0.45,ease:"expo.out"},1.5);
+    tl.fromTo("#ev-c2",{opacity:0,x:60},{opacity:1,x:0,duration:0.45,ease:"expo.out"},1.65);
+    tl.to("#ev-b",{scale:1.8,opacity:0,filter:"blur(10px)",duration:0.25,ease:"power3.in"},5.583);
+    window.__timelines["event"] = tl;
+  </script>
+</template>

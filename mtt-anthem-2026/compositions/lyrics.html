@@ -1,0 +1,95 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;pointer-events:none;}
+    #ly-band{position:absolute;left:0;top:1176px;width:1080px;height:132px;opacity:0;background:linear-gradient(90deg,rgba(3,8,30,0) 0%,rgba(3,8,30,.9) 14%,rgba(3,8,30,.9) 86%,rgba(3,8,30,0) 100%);}
+    #ly-band:before,#ly-band:after{content:"";position:absolute;left:8%;width:84%;height:3px;background:linear-gradient(90deg,rgba(255,214,110,0),#ffd66e,rgba(255,214,110,0));}
+    #ly-band:before{top:0;} #ly-band:after{bottom:0;}
+    #root .ly-line{position:absolute;left:30px;top:1176px;width:1020px;height:132px;line-height:132px;text-align:center;font-family:"Cinzel",serif;font-weight:900;white-space:nowrap;}
+    #root .ly-line .w{display:inline-block;opacity:0;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 #4a2f04);}
+  </style>
+  <div id="root" data-composition-id="lyrics" data-width="1080" data-height="1350" data-layout-allow-caption-zone>
+    <div id="ly-band"></div>
+      <div class="ly-line" id="ly-0" style="font-size:58px"><span class="w" id="ly-0-0">MALAYSIA</span> <span class="w" id="ly-0-1">BERDIRI</span> <span class="w" id="ly-0-2">MEGAH</span></div>
+      <div class="ly-line" id="ly-1" style="font-size:48px"><span class="w" id="ly-1-0">MENYENTUH</span> <span class="w" id="ly-1-1">DUNIA</span> <span class="w" id="ly-1-2">DENGAN</span> <span class="w" id="ly-1-3">JIWA</span></div>
+      <div class="ly-line" id="ly-2" style="font-size:46px"><span class="w" id="ly-2-0">SUARA</span> <span class="w" id="ly-2-1">DUNIA</span> <span class="w" id="ly-2-2">DENGAR</span> <span class="w" id="ly-2-3">NAMA</span> <span class="w" id="ly-2-4">KITA</span></div>
+      <div class="ly-line" id="ly-3" style="font-size:54px"><span class="w" id="ly-3-0">MALAYSIA</span> <span class="w" id="ly-3-1">THERAPISTS</span> <span class="w" id="ly-3-2">TEAM</span></div>
+      <div class="ly-line" id="ly-4" style="font-size:60px"><span class="w" id="ly-4-0">BERSATU</span> <span class="w" id="ly-4-1">TENAGA</span></div>
+      <div class="ly-line" id="ly-5" style="font-size:60px"><span class="w" id="ly-5-0">DI</span> <span class="w" id="ly-5-1">PERSADA</span> <span class="w" id="ly-5-2">DUNIA</span></div>
+      <div class="ly-line" id="ly-6" style="font-size:56px"><span class="w" id="ly-6-0">KITA</span> <span class="w" id="ly-6-1">BERSINAR</span> <span class="w" id="ly-6-2">SELAMANYA</span></div>
+      <div class="ly-line" id="ly-7" style="font-size:58px"><span class="w" id="ly-7-0">MALAYSIA</span> <span class="w" id="ly-7-1">TERUKIR</span> <span class="w" id="ly-7-2">ABADI</span></div>
+      <div class="ly-line" id="ly-8" style="font-size:43px"><span class="w" id="ly-8-0">SENTUHAN</span> <span class="w" id="ly-8-1">SUCI</span> <span class="w" id="ly-8-2">DARI</span> <span class="w" id="ly-8-3">JIWA</span> <span class="w" id="ly-8-4">BANGSA</span></div>
+      <div class="ly-line" id="ly-9" style="font-size:48px"><span class="w" id="ly-9-0">MTT</span> <span class="w" id="ly-9-1">BERDIRI</span> <span class="w" id="ly-9-2">DI</span> <span class="w" id="ly-9-3">PUNCAK</span> <span class="w" id="ly-9-4">DUNIA</span></div>
+      <div class="ly-line" id="ly-10" style="font-size:44px"><span class="w" id="ly-10-0">MEMBAWA</span> <span class="w" id="ly-10-1">DAMAI,</span> <span class="w" id="ly-10-2">MEMBAWA</span> <span class="w" id="ly-10-3">CAHAYA</span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#ly-band",{opacity:0,scaleX:0.6},{opacity:1,scaleX:1,duration:0.22,ease:"expo.out"},42.67);
+    tl.fromTo("#ly-0-0",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},42.81);
+    tl.fromTo("#ly-0-1",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},43.97);
+    tl.fromTo("#ly-0-2",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},45.31);
+    tl.to("#ly-0",{opacity:0,filter:"blur(6px)",duration:0.16,ease:"power2.in"},45.84);
+tl.fromTo("#ly-band",{opacity:0,scaleX:0.6},{opacity:1,scaleX:1,duration:0.22,ease:"expo.out"},45.89);
+    tl.fromTo("#ly-1-0",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},46.03);
+    tl.fromTo("#ly-1-1",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},46.91);
+    tl.fromTo("#ly-1-2",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},47.77);
+    tl.fromTo("#ly-1-3",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},48.05);
+    tl.to("#ly-1",{opacity:0,filter:"blur(6px)",duration:0.16,ease:"power2.in"},48.89);
+    tl.to("#ly-band",{opacity:0,duration:0.2,ease:"power2.in"},48.95);
+tl.fromTo("#ly-band",{opacity:0,scaleX:0.6},{opacity:1,scaleX:1,duration:0.22,ease:"expo.out"},52.35);
+    tl.fromTo("#ly-2-0",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},52.49);
+    tl.fromTo("#ly-2-1",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},52.87);
+    tl.fromTo("#ly-2-2",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},53.47);
+    tl.fromTo("#ly-2-3",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},54.01);
+    tl.fromTo("#ly-2-4",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},54.69);
+    tl.to("#ly-2",{opacity:0,filter:"blur(6px)",duration:0.16,ease:"power2.in"},55.24);
+tl.fromTo("#ly-band",{opacity:0,scaleX:0.6},{opacity:1,scaleX:1,duration:0.22,ease:"expo.out"},55.33);
+    tl.fromTo("#ly-3-0",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},55.47);
+    tl.fromTo("#ly-3-1",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},56.53);
+    tl.fromTo("#ly-3-2",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},57.99);
+    tl.to("#ly-3",{opacity:0,filter:"blur(6px)",duration:0.16,ease:"power2.in"},58.39);
+tl.fromTo("#ly-band",{opacity:0,scaleX:0.6},{opacity:1,scaleX:1,duration:0.22,ease:"expo.out"},58.43);
+    tl.fromTo("#ly-4-0",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},58.57);
+    tl.fromTo("#ly-4-1",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},59.73);
+    tl.to("#ly-4",{opacity:0,filter:"blur(6px)",duration:0.16,ease:"power2.in"},60.64);
+tl.fromTo("#ly-band",{opacity:0,scaleX:0.6},{opacity:1,scaleX:1,duration:0.22,ease:"expo.out"},60.69);
+    tl.fromTo("#ly-5-0",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},60.83);
+    tl.fromTo("#ly-5-1",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},61.69);
+    tl.fromTo("#ly-5-2",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},63.67);
+    tl.to("#ly-5",{opacity:0,filter:"blur(6px)",duration:0.16,ease:"power2.in"},65.49);
+tl.fromTo("#ly-band",{opacity:0,scaleX:0.6},{opacity:1,scaleX:1,duration:0.22,ease:"expo.out"},65.57);
+    tl.fromTo("#ly-6-0",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},65.71);
+    tl.fromTo("#ly-6-1",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},67.73);
+    tl.fromTo("#ly-6-2",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},68.93);
+    tl.to("#ly-6",{opacity:0,filter:"blur(6px)",duration:0.16,ease:"power2.in"},70.69);
+    tl.to("#ly-band",{opacity:0,duration:0.2,ease:"power2.in"},70.75);
+tl.fromTo("#ly-band",{opacity:0,scaleX:0.6},{opacity:1,scaleX:1,duration:0.22,ease:"expo.out"},105.95);
+    tl.fromTo("#ly-7-0",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},106.09);
+    tl.fromTo("#ly-7-1",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},107.01);
+    tl.fromTo("#ly-7-2",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},107.75);
+    tl.to("#ly-7",{opacity:0,filter:"blur(6px)",duration:0.16,ease:"power2.in"},107.94);
+    tl.to("#ly-band",{opacity:0,duration:0.2,ease:"power2.in"},108);
+tl.fromTo("#ly-band",{opacity:0,scaleX:0.6},{opacity:1,scaleX:1,duration:0.22,ease:"expo.out"},111.15);
+    tl.fromTo("#ly-8-0",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},111.29);
+    tl.fromTo("#ly-8-1",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},112.21);
+    tl.fromTo("#ly-8-2",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},112.69);
+    tl.fromTo("#ly-8-3",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},112.97);
+    tl.fromTo("#ly-8-4",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},113.91);
+    tl.to("#ly-8",{opacity:0,filter:"blur(6px)",duration:0.16,ease:"power2.in"},114.89);
+tl.fromTo("#ly-band",{opacity:0,scaleX:0.6},{opacity:1,scaleX:1,duration:0.22,ease:"expo.out"},114.95);
+    tl.fromTo("#ly-9-0",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},115.09);
+    tl.fromTo("#ly-9-1",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},115.69);
+    tl.fromTo("#ly-9-2",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},116.43);
+    tl.fromTo("#ly-9-3",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},116.57);
+    tl.fromTo("#ly-9-4",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},116.99);
+    tl.to("#ly-9",{opacity:0,filter:"blur(6px)",duration:0.16,ease:"power2.in"},117.59);
+tl.fromTo("#ly-band",{opacity:0,scaleX:0.6},{opacity:1,scaleX:1,duration:0.22,ease:"expo.out"},117.65);
+    tl.fromTo("#ly-10-0",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},117.79);
+    tl.fromTo("#ly-10-1",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},118.53);
+    tl.fromTo("#ly-10-2",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},119.09);
+    tl.fromTo("#ly-10-3",{opacity:0,filter:"blur(6px)",y:10},{opacity:1,filter:"blur(0px)",y:0,duration:0.16,ease:"power2.out"},119.75);
+    tl.to("#ly-10",{opacity:0,filter:"blur(6px)",duration:0.16,ease:"power2.in"},120.79);
+    tl.to("#ly-band",{opacity:0,duration:0.2,ease:"power2.in"},120.85);
+
+    window.__timelines["lyrics"] = tl;
+  </script>
+</template>

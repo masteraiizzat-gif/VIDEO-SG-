@@ -1,0 +1,111 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#030716;}
+    #fn-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+    #fn-wall{position:absolute;left:0;top:270px;width:1080px;height:810px;}
+    #root .fn-tile{position:absolute;width:180px;height:270px;background-size:cover;background-position:50% 0;}
+    #fn-a{position:absolute;inset:0;}
+    #fn-a1{position:absolute;left:0;top:70px;width:1080px;text-align:center;font:900 140px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #5a3a05) drop-shadow(0 0 26px rgba(255,190,60,.45));}
+    #fn-a2{position:absolute;left:0;top:1150px;width:1080px;text-align:center;font:800 40px/1 "MontserratX",sans-serif;color:#fff;letter-spacing:.2em;padding-left:.2em;}
+    #fn-grp{position:absolute;left:0;top:270px;width:1080px;height:810px;opacity:0;}
+    #fn-topt{position:absolute;left:0;top:0;width:1080px;height:270px;}
+    #fn-m,#fn-tah{position:absolute;left:0;top:70px;width:1080px;text-align:center;font:900 140px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #5a3a05) drop-shadow(0 0 26px rgba(255,190,60,.45));opacity:0;}
+    #fn-k{position:absolute;left:20px;top:80px;width:330px;text-align:right;font:400 130px/1 "Anton",sans-serif;color:#fff;text-shadow:0 6px 0 #b3001b;opacity:0;}
+    #fn-j{position:absolute;left:385px;top:66px;width:680px;text-align:left;font:900 140px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 0 #5a3a05) drop-shadow(0 0 30px rgba(255,190,60,.5));opacity:0;}
+    #fn-b{position:absolute;left:20px;top:1125px;width:1040px;text-align:center;font:800 34px/1.45 "MontserratX",sans-serif;color:#fff;letter-spacing:.04em;}
+    #fn-end{position:absolute;inset:0;opacity:0;background:radial-gradient(ellipse at 50% 38%,#13286e 0%,#060c2c 50%,#02040f 100%);}
+    #fn-rays{position:absolute;left:-560px;top:-600px;width:2200px;height:2200px;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(255,210,110,.15) 0deg 5deg,rgba(255,210,110,0) 5deg 15deg);}
+    #fn-elogo{position:absolute;left:170px;top:120px;width:740px;height:437px;-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 72%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 72%,transparent 100%);}
+    #fn-e1{position:absolute;left:0;top:600px;width:1080px;text-align:center;font:900 84px/1.1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #5a3a05);}
+    #fn-e2{position:absolute;left:0;top:800px;width:1080px;text-align:center;font:800 32px/1 "MontserratX",sans-serif;color:#ffe9b0;letter-spacing:.22em;padding-left:.22em;}
+    #fn-e3{position:absolute;left:90px;top:870px;width:900px;height:84px;border-radius:42px;background:linear-gradient(180deg,#ffe48a,#c88a14);font:900 28px/84px "Cinzel",serif;color:#1a1204;text-align:center;box-shadow:0 0 40px rgba(255,200,80,.5);white-space:nowrap;}
+    #fn-e4{position:absolute;left:0;top:985px;width:1080px;text-align:center;font:800 32px/1.4 "MontserratX",sans-serif;color:#fff;letter-spacing:.06em;}
+    #fn-boleh{position:absolute;left:0;top:1090px;width:1080px;text-align:center;font:400 120px/1 "Anton",sans-serif;color:#fff;letter-spacing:.04em;text-shadow:0 7px 0 #b3001b,0 0 40px rgba(255,40,60,.5);opacity:0;}
+    #fn-flash{position:absolute;inset:0;background:#fff6dc;opacity:0;}
+    #fn-sweep{position:absolute;top:-10%;left:0;width:320px;height:120%;background:linear-gradient(90deg,rgba(255,240,200,0),rgba(255,244,210,.35),rgba(255,240,200,0));mix-blend-mode:screen;}
+  </style>
+  <div id="root" data-composition-id="finale" data-width="1080" data-height="1350">
+    <img id="fn-bg" src="assets/bg/mtt18.jpg" alt=""/>
+    <div id="fn-wall" data-layout-allow-overflow>
+        <div class="fn-tile" id="fn-t0" style="left:0px;top:0px;background-image:url('assets/posters/01-shah.jpg')"></div>
+        <div class="fn-tile" id="fn-t1" style="left:180px;top:0px;background-image:url('assets/posters/02-mohamad.jpg')"></div>
+        <div class="fn-tile" id="fn-t2" style="left:360px;top:0px;background-image:url('assets/posters/03-rex.jpg')"></div>
+        <div class="fn-tile" id="fn-t3" style="left:540px;top:0px;background-image:url('assets/posters/04-akmal.jpg')"></div>
+        <div class="fn-tile" id="fn-t4" style="left:720px;top:0px;background-image:url('assets/posters/05-sukri.jpg')"></div>
+        <div class="fn-tile" id="fn-t5" style="left:900px;top:0px;background-image:url('assets/posters/06-sherry-soep.jpg')"></div>
+        <div class="fn-tile" id="fn-t6" style="left:0px;top:270px;background-image:url('assets/posters/07-lynd-a-robert.jpg')"></div>
+        <div class="fn-tile" id="fn-t7" style="left:180px;top:270px;background-image:url('assets/posters/08-adriana-jane.jpg')"></div>
+        <div class="fn-tile" id="fn-t8" style="left:360px;top:270px;background-image:url('assets/posters/09-marinda-majapin.jpg')"></div>
+        <div class="fn-tile" id="fn-t9" style="left:540px;top:270px;background-image:url('assets/posters/10-lucia.jpg')"></div>
+        <div class="fn-tile" id="fn-t10" style="left:720px;top:270px;background-image:url('assets/posters/11-izza.jpg')"></div>
+        <div class="fn-tile" id="fn-t11" style="left:900px;top:270px;background-image:url('assets/posters/12-norashikin.jpg')"></div>
+        <div class="fn-tile" id="fn-t12" style="left:0px;top:540px;background-image:url('assets/posters/13-siti-hamidah.jpg')"></div>
+        <div class="fn-tile" id="fn-t13" style="left:180px;top:540px;background-image:url('assets/posters/14-rias.jpg')"></div>
+        <div class="fn-tile" id="fn-t14" style="left:360px;top:540px;background-image:url('assets/posters/15-leo-zackery.jpg')"></div>
+        <div class="fn-tile" id="fn-t15" style="left:540px;top:540px;background-image:url('assets/posters/16-qaizil.jpg')"></div>
+        <div class="fn-tile" id="fn-t16" style="left:720px;top:540px;background-image:url('assets/posters/17-roslan.jpg')"></div>
+        <div class="fn-tile" id="fn-t17" style="left:900px;top:540px;background-image:url('assets/posters/18-sam-yong.jpg')"></div>
+    </div>
+    <div id="fn-a"><div id="fn-a1">18 WIRA</div><div id="fn-a2">MALAYSIA THERAPISTS TEAM</div></div>
+    <img id="fn-grp" src="assets/posters/mtt18.jpg" alt=""/>
+    <div id="fn-topt" data-layout-allow-overlap data-layout-allow-overflow>
+      <div id="fn-m">MALAYSIA</div>
+      <div id="fn-k">KAMI</div><div id="fn-j">JUARA!</div>
+      <div id="fn-tah">TAHNIAH!</div>
+    </div>
+    <div id="fn-b"><span class="w">SEMOGA</span> <span class="w">PULANG</span> <span class="w">DENGAN</span> <span class="w">KEJAYAAN</span><br/><span class="w">DAN</span> <span class="w">MENGHARUMKAN</span> <span class="w">NEGARA</span> <span class="w">YANG</span> <span class="w">TERCINTA</span></div>
+    <div id="fn-end" data-layout-allow-overflow>
+      <div id="fn-rays" data-layout-ignore></div>
+      <img id="fn-elogo" src="assets/posters/mtt-logo.jpg" alt=""/>
+      <div id="fn-e1">MALAYSIA<br/>THERAPISTS TEAM</div>
+      <div id="fn-e2">ONE TOUCH, A THOUSAND HARMONY</div>
+      <div id="fn-e3">WORLD TRADITIONAL MASSAGE CHAMPIONSHIP</div>
+      <div id="fn-e4">SINGAPORE · 28 – 29 NOVEMBER 2026<br/>HOTEL CHANCELLOR @ ORCHARD</div>
+      <div id="fn-boleh">MALAYSIA BOLEH!</div>
+      <div id="fn-sweep" data-layout-ignore></div>
+    </div>
+    <div id="fn-flash" data-layout-ignore></div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    let seed = 20261128; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    for (let n = 0; n < 18; n++) {
+      const rx = (rnd() - 0.5) * 1400, ry = (rnd() - 0.5) * 1400, rr = (rnd() - 0.5) * 70;
+      tl.fromTo("#fn-t" + n, {x: rx, y: ry, rotation: rr, scale: 0, opacity: 0}, {x: 0, y: 0, rotation: 0, scale: 1, opacity: 1, duration: 0.55, ease: "expo.out"}, 0.389 * Math.floor(n / 2) * 0.5 + 0.05);
+    }
+    tl.fromTo("#fn-wall",{scale:1},{scale:1.04,duration:5.635,ease:"none"},0);
+    tl.fromTo("#fn-a1",{opacity:0,scale:1.8},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},0.98);
+    tl.fromTo("#fn-a2",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.2,ease:"power2.out"},1.5);
+    tl.fromTo("#fn-flash",{opacity:0},{opacity:0.8,duration:0.03,ease:"none"},5.805).to("#fn-flash",{opacity:0,duration:0.28,ease:"power2.out"},5.835);
+    tl.to(["#fn-wall","#fn-a"],{opacity:0,duration:0.05,ease:"none"},5.785);
+    tl.fromTo("#fn-grp",{opacity:0,scale:1.08},{opacity:1,scale:1,duration:0.5,ease:"expo.out"},5.815);
+    tl.to("#fn-grp",{scale:1.05,duration:11.875,ease:"none"},6.335);
+    tl.fromTo("#fn-m",{opacity:0,scale:2},{opacity:1,scale:1,duration:0.18,ease:"power4.in"},5.655);
+    tl.fromTo("#fn-topt",{x:0,y:0},{x:-12,y:7.199999999999999,duration:0.034,ease:"none"},5.835).to("#fn-topt",{x:9,y:-6,duration:0.034,ease:"none"},5.869).to("#fn-topt",{x:0,y:0,duration:0.06,ease:"power2.out"},5.903);
+    tl.to("#fn-m",{opacity:0,filter:"blur(8px)",duration:0.12,ease:"power2.in"},7.095);
+    tl.fromTo("#fn-k",{opacity:0,scale:1.7},{opacity:1,scale:1,duration:0.18,ease:"power4.in"},7.055);
+    tl.fromTo("#fn-j",{opacity:0,scale:2.4},{opacity:1,scale:1,duration:0.2,ease:"power4.in"},8.435);
+    tl.fromTo("#fn-topt",{x:0,y:0},{x:-16,y:9.6,duration:0.034,ease:"none"},8.635).to("#fn-topt",{x:12,y:-8,duration:0.034,ease:"none"},8.669).to("#fn-topt",{x:0,y:0,duration:0.06,ease:"power2.out"},8.703);
+    tl.fromTo("#fn-flash",{opacity:0},{opacity:0.5,duration:0.03,ease:"none"},8.605).to("#fn-flash",{opacity:0,duration:0.28,ease:"power2.out"},8.635);
+    tl.to(["#fn-k","#fn-j"],{opacity:0,filter:"blur(8px)",duration:0.15,ease:"power2.in"},11.235);
+    tl.fromTo("#fn-tah",{opacity:0,scale:1.8},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},11.315);
+    tl.fromTo("#fn-b .w",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.14,stagger:0.09,ease:"power2.out"},9.635);
+    tl.to(["#fn-grp","#fn-topt","#fn-b"],{scale:1.8,opacity:0,filter:"blur(12px)",duration:0.3,ease:"power3.in"},18.01);
+    tl.fromTo("#fn-end",{opacity:0},{opacity:1,duration:0.2,ease:"none"},18.26);
+    tl.fromTo("#fn-rays",{rotation:0},{rotation:51.617,duration:10.323,ease:"none"},18.31);
+    tl.fromTo("#fn-elogo",{scale:0.5,opacity:0,filter:"blur(12px)"},{scale:1,opacity:1,filter:"blur(0px)",duration:0.6,ease:"expo.out"},18.31);
+    tl.fromTo("#fn-e1",{opacity:0,scale:1.7},{opacity:1,scale:1,duration:0.22,ease:"power4.in"},18.79);
+    tl.fromTo("#fn-e2",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.25,ease:"power2.out"},19.51);
+    tl.fromTo("#fn-e3",{opacity:0,y:20},{opacity:1,y:0,duration:0.45,ease:"expo.out"},20.11);
+    tl.fromTo("#fn-e4",{opacity:0,y:20},{opacity:1,y:0,duration:0.45,ease:"expo.out"},20.41);
+    tl.fromTo("#fn-boleh",{opacity:0,scale:2.3},{opacity:1,scale:1,duration:0.2,ease:"power4.in"},25.495);
+    tl.fromTo("#fn-end",{x:0,y:0},{x:-14,y:8.4,duration:0.034,ease:"none"},25.695).to("#fn-end",{x:10.5,y:-7,duration:0.034,ease:"none"},25.729).to("#fn-end",{x:0,y:0,duration:0.06,ease:"power2.out"},25.763);
+    tl.fromTo("#fn-flash",{opacity:0},{opacity:0.6,duration:0.03,ease:"none"},25.665).to("#fn-flash",{opacity:0,duration:0.28,ease:"power2.out"},25.695);
+    tl.fromTo("#fn-sweep",{x:-500,rotation:16},{x:1500,rotation:16,duration:1.1,ease:"power2.inOut"},20.91);
+    tl.fromTo("#fn-sweep",{x:-500,rotation:16},{x:1500,rotation:16,duration:1.1,ease:"power2.inOut"},23.51);
+    tl.fromTo("#fn-elogo",{scale:1},{scale:1.06,duration:6.785,ease:"power1.inOut"},18.91);
+
+    window.__timelines["finale"] = tl;
+  </script>
+</template>

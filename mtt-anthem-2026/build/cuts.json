@@ -1,0 +1,457 @@
+{
+ "total": 151.5,
+ "scenes": [
+  {
+   "id": "teaser",
+   "start": 0,
+   "end": 12.167,
+   "songStart": 1.45
+  },
+  {
+   "id": "chant",
+   "start": 12.167,
+   "end": 18.833,
+   "songStart": 13.617
+  },
+  {
+   "id": "event",
+   "start": 18.833,
+   "end": 24.667,
+   "songStart": 20.283
+  },
+  {
+   "id": "group",
+   "start": 24.667,
+   "end": 49.2,
+   "songStart": 26.117
+  },
+  {
+   "id": "juara1",
+   "start": 49.2,
+   "end": 52.333,
+   "songStart": 50.65
+  },
+  {
+   "id": "p01",
+   "start": 52.333,
+   "end": 56.233,
+   "songStart": 53.783
+  },
+  {
+   "id": "p02",
+   "start": 56.233,
+   "end": 59.767,
+   "songStart": 57.683
+  },
+  {
+   "id": "p03",
+   "start": 59.767,
+   "end": 63.633,
+   "songStart": 61.217
+  },
+  {
+   "id": "p04",
+   "start": 63.633,
+   "end": 67.133,
+   "songStart": 65.083
+  },
+  {
+   "id": "p05",
+   "start": 67.133,
+   "end": 70.833,
+   "songStart": 68.583
+  },
+  {
+   "id": "p06",
+   "start": 70.833,
+   "end": 74.733,
+   "songStart": 72.283
+  },
+  {
+   "id": "p07",
+   "start": 74.733,
+   "end": 78.433,
+   "songStart": 76.183
+  },
+  {
+   "id": "p08",
+   "start": 78.433,
+   "end": 82.333,
+   "songStart": 79.883
+  },
+  {
+   "id": "p09",
+   "start": 82.333,
+   "end": 85.833,
+   "songStart": 83.783
+  },
+  {
+   "id": "p10",
+   "start": 85.833,
+   "end": 89.533,
+   "songStart": 87.283
+  },
+  {
+   "id": "p11",
+   "start": 89.533,
+   "end": 93.433,
+   "songStart": 90.983
+  },
+  {
+   "id": "p12",
+   "start": 93.433,
+   "end": 97.133,
+   "songStart": 94.883
+  },
+  {
+   "id": "p13",
+   "start": 97.133,
+   "end": 100.633,
+   "songStart": 98.583
+  },
+  {
+   "id": "p14",
+   "start": 100.633,
+   "end": 104.533,
+   "songStart": 102.083
+  },
+  {
+   "id": "p15",
+   "start": 104.533,
+   "end": 108.233,
+   "songStart": 105.983
+  },
+  {
+   "id": "juara2",
+   "start": 108.233,
+   "end": 111.333,
+   "songStart": 109.683
+  },
+  {
+   "id": "p16",
+   "start": 111.333,
+   "end": 115.067,
+   "songStart": 112.783
+  },
+  {
+   "id": "p17",
+   "start": 115.067,
+   "end": 118.967,
+   "songStart": 116.517
+  },
+  {
+   "id": "p18",
+   "start": 118.967,
+   "end": 122.867,
+   "songStart": 120.417
+  },
+  {
+   "id": "finale",
+   "start": 122.867,
+   "end": 151.5,
+   "songStart": 124.317
+  }
+ ],
+ "sfx": [
+  {
+   "name": "impact-deep",
+   "start": 0,
+   "vol": 0.55,
+   "lane": 10
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 2.033333333333333,
+   "vol": 0.45,
+   "lane": 11
+  },
+  {
+   "name": "whoosh-cinematic",
+   "start": 2.3,
+   "vol": 0.4,
+   "lane": 12
+  },
+  {
+   "name": "riser",
+   "start": 8.666666666666666,
+   "vol": 0.4,
+   "lane": 10
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 12.233333333333333,
+   "vol": 0.4,
+   "lane": 11
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 13.633333333333333,
+   "vol": 0.4,
+   "lane": 10
+  },
+  {
+   "name": "impact-deep",
+   "start": 15.033333333333333,
+   "vol": 0.4,
+   "lane": 11
+  },
+  {
+   "name": "impact-bass-2",
+   "start": 15.666666666666666,
+   "vol": 0.6,
+   "lane": 12
+  },
+  {
+   "name": "whoosh-high",
+   "start": 18.766666666666666,
+   "vol": 0.3,
+   "lane": 10
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 19.133333333333333,
+   "vol": 0.35,
+   "lane": 11
+  },
+  {
+   "name": "pop",
+   "start": 20.1,
+   "vol": 0.35,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-low",
+   "start": 26.966666666666665,
+   "vol": 0.22,
+   "lane": 10
+  },
+  {
+   "name": "whoosh",
+   "start": 30.9,
+   "vol": 0.22,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-low",
+   "start": 35.13333333333333,
+   "vol": 0.22,
+   "lane": 10
+  },
+  {
+   "name": "whoosh",
+   "start": 39.06666666666667,
+   "vol": 0.22,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-cinematic",
+   "start": 40.3,
+   "vol": 0.3,
+   "lane": 10
+  },
+  {
+   "name": "impact-bass-2",
+   "start": 40.93333333333333,
+   "vol": 0.55,
+   "lane": 11
+  },
+  {
+   "name": "sparkle",
+   "start": 43.06666666666667,
+   "vol": 0.3,
+   "lane": 12
+  },
+  {
+   "name": "whoosh-high",
+   "start": 49.5,
+   "vol": 0.25,
+   "lane": 10
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 50.2,
+   "vol": 0.45,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-high",
+   "start": 50.833333333333336,
+   "vol": 0.25,
+   "lane": 11
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 51.233333333333334,
+   "vol": 0.45,
+   "lane": 12
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 52.8,
+   "vol": 0.30000000000000004,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-high",
+   "start": 56.166666666666664,
+   "vol": 0.26249999999999996,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-low",
+   "start": 60.3,
+   "vol": 0.22499999999999998,
+   "lane": 10
+  },
+  {
+   "name": "impact-deep",
+   "start": 63.86666666666667,
+   "vol": 0.30000000000000004,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-high",
+   "start": 67.06666666666666,
+   "vol": 0.22499999999999998,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-low",
+   "start": 70.83333333333333,
+   "vol": 0.22499999999999998,
+   "lane": 10
+  },
+  {
+   "name": "impact-deep",
+   "start": 75.03333333333333,
+   "vol": 0.28500000000000003,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-high",
+   "start": 79.03333333333333,
+   "vol": 0.22499999999999998,
+   "lane": 10
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 82.8,
+   "vol": 0.30000000000000004,
+   "lane": 10
+  },
+  {
+   "name": "whoosh",
+   "start": 85.73333333333333,
+   "vol": 0.26249999999999996,
+   "lane": 10
+  },
+  {
+   "name": "impact-deep",
+   "start": 89.76666666666667,
+   "vol": 0.30000000000000004,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-low",
+   "start": 93.43333333333334,
+   "vol": 0.22499999999999998,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-high",
+   "start": 97.06666666666666,
+   "vol": 0.22499999999999998,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-high",
+   "start": 101.23333333333333,
+   "vol": 0.22499999999999998,
+   "lane": 10
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 105,
+   "vol": 0.30000000000000004,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-high",
+   "start": 108.5,
+   "vol": 0.25,
+   "lane": 10
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 109.23333333333333,
+   "vol": 0.45,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-high",
+   "start": 110.03333333333333,
+   "vol": 0.25,
+   "lane": 11
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 110.43333333333334,
+   "vol": 0.45,
+   "lane": 12
+  },
+  {
+   "name": "impact-deep",
+   "start": 111.63333333333334,
+   "vol": 0.28500000000000003,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-high",
+   "start": 115,
+   "vol": 0.26249999999999996,
+   "lane": 10
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 119.43333333333334,
+   "vol": 0.30000000000000004,
+   "lane": 10
+  },
+  {
+   "name": "whoosh",
+   "start": 122.83333333333333,
+   "vol": 0.3,
+   "lane": 10
+  },
+  {
+   "name": "impact-bass-1",
+   "start": 128.66666666666666,
+   "vol": 0.5,
+   "lane": 10
+  },
+  {
+   "name": "impact-bass-2",
+   "start": 129.56666666666666,
+   "vol": 0.55,
+   "lane": 11
+  },
+  {
+   "name": "sparkle",
+   "start": 131.8,
+   "vol": 0.3,
+   "lane": 10
+  },
+  {
+   "name": "whoosh-cinematic",
+   "start": 138.53333333333333,
+   "vol": 0.35,
+   "lane": 10
+  },
+  {
+   "name": "impact-deep",
+   "start": 148.5,
+   "vol": 0.55,
+   "lane": 10
+  }
+ ]
+}
