@@ -1,4 +1,4 @@
+*.log
 .hyperframes/
 node_modules/
-*.log
 renders/

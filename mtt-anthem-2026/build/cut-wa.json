@@ -1,0 +1,8 @@
+{
+ "outDir": "../mtt-wa-status",
+ "segments": [[12.5, 20.27], [43.86, 72.8], [129.86, 140.0], [146.0, 152.95]],
+ "chantStart": 13.6,
+ "groupEnd": 47.0,
+ "groupFrom": [725, 520],
+ "musicVolume": 0.85
+}

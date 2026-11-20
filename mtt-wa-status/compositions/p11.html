@@ -1,0 +1,55 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#040a22;}
+    #p11-bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+    #p11-shade{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(4,10,34,0) 40%,rgba(2,5,18,.75) 100%);}
+    #p11-cam{position:absolute;inset:0;}
+    #p11-card{position:absolute;left:90px;top:0;width:900px;height:1350px;overflow:hidden;box-shadow:0 0 60px rgba(255,200,80,.35);}
+    #root .band,#root .strip{position:absolute;inset:0;background-size:900px 1350px;background-repeat:no-repeat;}
+    #p11-pun{position:absolute;inset:0;transform-origin:50% 30%;}
+    #p11-shk{position:absolute;inset:0;}
+    #p11-tahniah{transform-origin:50% 45.7%;}
+    #p11-sweep{position:absolute;top:-25%;left:0;width:300px;height:150%;background:linear-gradient(90deg,rgba(255,240,200,0) 0%,rgba(255,244,210,.55) 50%,rgba(255,240,200,0) 100%);mix-blend-mode:screen;}
+    #p11-edgeL,#p11-edgeR{position:absolute;top:0;width:3px;height:1350px;background:linear-gradient(180deg,rgba(255,215,110,0),#ffd56a 20%,#fff1b8 50%,#ffd56a 80%,rgba(255,215,110,0));}
+    #p11-edgeL{left:87px;} #p11-edgeR{left:990px;}
+    #p11-tag{position:absolute;right:12px;top:22px;width:66px;font:800 26px/1 "MontserratX",sans-serif;color:#ffe08a;text-align:center;letter-spacing:.02em;}
+    #p11-tag small{display:block;font-size:13px;color:rgba(255,255,255,.7);margin-top:4px;}
+    #p11-flash{position:absolute;inset:0;background:#fff8e6;opacity:0;}
+  </style>
+  <div id="root" data-composition-id="p11" data-width="1080" data-height="1350">
+    <img id="p11-bgimg" src="assets/bg/11-izza.jpg" alt=""/>
+    <div id="p11-shade"></div>
+    <div id="p11-cam" data-layout-allow-overflow><div id="p11-pun" data-layout-allow-overflow><div id="p11-shk" data-layout-allow-overflow>
+      <div id="p11-edgeL"></div><div id="p11-edgeR"></div>
+      <div id="p11-card" data-layout-allow-overflow>
+        <div class="band" id="p11-hero" style="clip-path:inset(0% 0 65.4% 0);background-image:url('assets/posters/11-izza.jpg')"></div>
+          <div class="band" id="p11-name" style="clip-path:inset(34.6% 0 59.4% 0);background-image:url('assets/posters/11-izza.jpg')"></div>
+          <div class="band" id="p11-tahniah" style="clip-path:inset(40.6% 0 49.2% 0);background-image:url('assets/posters/11-izza.jpg')"></div>
+          <div class="band" id="p11-country" style="clip-path:inset(50.8% 0 31.4% 0);background-image:url('assets/posters/11-izza.jpg')"></div>
+          <div class="band" id="p11-event" style="clip-path:inset(68.6% 0 23.4% 0);background-image:url('assets/posters/11-izza.jpg')"></div>
+          <div class="band" id="p11-foot" style="clip-path:inset(76.6% 0 0% 0);background-image:url('assets/posters/11-izza.jpg')"></div>
+        <div id="p11-sweep"></div>
+      </div>
+    </div></div></div>
+    <div id="p11-tag" data-layout-ignore>11<small>/18</small></div>
+    <div id="p11-flash" data-layout-ignore></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const shake = (t) => {
+      tl.fromTo("#p11-shk",{x:0,y:0},{x:-14,y:9,duration:0.034,ease:"none"},t)
+        .to("#p11-shk",{x:11,y:-8,duration:0.034,ease:"none"},t+0.034)
+        .to("#p11-shk",{x:-6,y:4,duration:0.034,ease:"none"},t+0.068)
+        .to("#p11-shk",{x:0,y:0,duration:0.05,ease:"power2.out"},t+0.102);
+    };
+    tl.set("#p11-flash",{opacity:0},0);
+    tl.fromTo("#p11-tag",{opacity:0,y:-10},{opacity:1,y:0,duration:0.3,ease:"expo.out"},0.35);
+    
+    tl.fromTo("#p11-cam",{x:980,filter:"blur(16px)"},{x:0,filter:"blur(0px)",duration:0.42,ease:"expo.out"},0);
+    tl.fromTo("#p11-sweep",{x:-420,rotation:16},{x:1300,rotation:16,duration:0.85,ease:"power2.inOut"},0.35);
+    tl.fromTo("#p11-bgimg",{scale:1.08},{scale:1.0,duration:1.2,ease:"none"},0);
+    
+    tl.to("#p11-cam",{scale:1.6,opacity:0,filter:"blur(12px)",duration:0.2,ease:"power3.in"},1);
+    window.__timelines["p11"] = tl;
+  </script>
+</template>

@@ -1,0 +1,55 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#040a22;}
+    #p03-bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+    #p03-shade{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(4,10,34,0) 40%,rgba(2,5,18,.75) 100%);}
+    #p03-cam{position:absolute;inset:0;}
+    #p03-card{position:absolute;left:0px;top:0;width:1080px;height:1350px;overflow:hidden;box-shadow:0 0 60px rgba(255,200,80,.35);}
+    #root .band,#root .strip{position:absolute;inset:0;background-size:1080px 1350px;background-repeat:no-repeat;}
+    #p03-pun{position:absolute;inset:0;transform-origin:50% 30%;}
+    #p03-shk{position:absolute;inset:0;}
+    #p03-tahniah{transform-origin:50% 45.7%;}
+    #p03-sweep{position:absolute;top:-25%;left:0;width:300px;height:150%;background:linear-gradient(90deg,rgba(255,240,200,0) 0%,rgba(255,244,210,.55) 50%,rgba(255,240,200,0) 100%);mix-blend-mode:screen;}
+    #p03-edgeL,#p03-edgeR{position:absolute;top:0;width:3px;height:1350px;background:linear-gradient(180deg,rgba(255,215,110,0),#ffd56a 20%,#fff1b8 50%,#ffd56a 80%,rgba(255,215,110,0));}
+    #p03-edgeL{left:-3px;} #p03-edgeR{left:1080px;}
+    #p03-tag{position:absolute;right:12px;top:22px;width:66px;font:800 26px/1 "MontserratX",sans-serif;color:#ffe08a;text-align:center;letter-spacing:.02em;}
+    #p03-tag small{display:block;font-size:13px;color:rgba(255,255,255,.7);margin-top:4px;}
+    #p03-flash{position:absolute;inset:0;background:#fff8e6;opacity:0;}
+  </style>
+  <div id="root" data-composition-id="p03" data-width="1080" data-height="1350">
+    <img id="p03-bgimg" src="assets/bg/03-rex.jpg" alt=""/>
+    <div id="p03-shade"></div>
+    <div id="p03-cam" data-layout-allow-overflow><div id="p03-pun" data-layout-allow-overflow><div id="p03-shk" data-layout-allow-overflow>
+      <div id="p03-edgeL"></div><div id="p03-edgeR"></div>
+      <div id="p03-card" data-layout-allow-overflow>
+        <div class="strip" id="p03-s0" style="clip-path:inset(0 66.66% 0 0%);background-image:url('assets/posters/03-rex.jpg')"></div>
+          <div class="strip" id="p03-s1" style="clip-path:inset(0 33.33% 0 33.33%);background-image:url('assets/posters/03-rex.jpg')"></div>
+          <div class="strip" id="p03-s2" style="clip-path:inset(0 0% 0 66.66%);background-image:url('assets/posters/03-rex.jpg')"></div>
+        <div id="p03-sweep"></div>
+      </div>
+    </div></div></div>
+    <div id="p03-tag" data-layout-ignore>03<small>/18</small></div>
+    <div id="p03-flash" data-layout-ignore></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const shake = (t) => {
+      tl.fromTo("#p03-shk",{x:0,y:0},{x:-14,y:9,duration:0.034,ease:"none"},t)
+        .to("#p03-shk",{x:11,y:-8,duration:0.034,ease:"none"},t+0.034)
+        .to("#p03-shk",{x:-6,y:4,duration:0.034,ease:"none"},t+0.068)
+        .to("#p03-shk",{x:0,y:0,duration:0.05,ease:"power2.out"},t+0.102);
+    };
+    tl.fromTo("#p03-flash",{opacity:1},{opacity:0,duration:0.22,ease:"power2.out"},0);
+    tl.fromTo("#p03-tag",{opacity:0,y:-10},{opacity:1,y:0,duration:0.3,ease:"expo.out"},0.35);
+    
+    tl.fromTo("#p03-s0",{y:-1400},{y:0,duration:0.5,ease:"expo.out"},0.0);
+    tl.fromTo("#p03-s1",{y:1400},{y:0,duration:0.5,ease:"expo.out"},0.07);
+    tl.fromTo("#p03-s2",{y:-1400},{y:0,duration:0.5,ease:"expo.out"},0.14);
+    shake(0.3);
+    tl.fromTo("#p03-sweep",{x:-420,rotation:16},{x:1300,rotation:16,duration:0.85,ease:"power2.inOut"},0.35);
+    tl.fromTo("#p03-bgimg",{scale:1.08},{scale:1.0,duration:1.167,ease:"none"},0);
+    
+    tl.to("#p03-flash",{opacity:1,duration:0.14,ease:"power2.in"},1.017);
+    window.__timelines["p03"] = tl;
+  </script>
+</template>

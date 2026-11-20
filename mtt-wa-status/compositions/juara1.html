@@ -1,0 +1,57 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#02040f;}
+    #root .ju-s{position:absolute;inset:0;opacity:0;}
+    #root .ju-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+    #root .ju-p{position:absolute;top:0;height:1350px;}
+    #juara1-dim{position:absolute;inset:0;background:radial-gradient(ellipse 80% 35% at 50% 50%,rgba(2,4,15,.85) 0%,rgba(2,4,15,.45) 70%,rgba(2,4,15,.3) 100%);}
+    #juara1-txt{position:absolute;left:0;top:0;width:1080px;height:1350px;}
+    #root .ju-k{position:absolute;left:0;top:520px;width:1080px;text-align:center;font:400 300px/1 "Anton",sans-serif;color:#fff;letter-spacing:.04em;text-shadow:0 10px 0 #b3001b,0 0 60px rgba(0,0,0,.8);opacity:0;}
+    #root .ju-j{position:absolute;left:0;top:540px;width:1080px;text-align:center;font:900 230px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 8px 0 #5a3a05) drop-shadow(0 0 50px rgba(255,190,60,.6));opacity:0;}
+    #juara1-flash{position:absolute;inset:0;background:#fff6dc;opacity:0;}
+  </style>
+  <div id="root" data-composition-id="juara1" data-width="1080" data-height="1350">
+    <div class="ju-s" id="juara1-s0"><img class="ju-bg" src="assets/bg/01-shah.jpg" alt=""/><img class="ju-p" src="assets/posters/01-shah.jpg" alt="" style="left:90px;width:900px"/></div>
+    <div class="ju-s" id="juara1-s1"><img class="ju-bg" src="assets/bg/06-sherry-soep.jpg" alt=""/><img class="ju-p" src="assets/posters/06-sherry-soep.jpg" alt="" style="left:90px;width:900px"/></div>
+    <div class="ju-s" id="juara1-s2"><img class="ju-bg" src="assets/bg/11-izza.jpg" alt=""/><img class="ju-p" src="assets/posters/11-izza.jpg" alt="" style="left:90px;width:900px"/></div>
+    <div class="ju-s" id="juara1-s3"><img class="ju-bg" src="assets/bg/16-qaizil.jpg" alt=""/><img class="ju-p" src="assets/posters/16-qaizil.jpg" alt="" style="left:90px;width:900px"/></div>
+    <div id="juara1-dim"></div>
+    <div id="juara1-txt" data-layout-allow-overlap data-layout-allow-overflow>
+      <div class="ju-k" id="juara1-w0">KAMI</div>
+      <div class="ju-j" id="juara1-w1">JUARA!</div>
+      <div class="ju-k" id="juara1-w2">KAMI</div>
+      <div class="ju-j" id="juara1-w3">JUARA!</div>
+    </div>
+    <div id="juara1-flash" data-layout-ignore></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#juara1-s0",{opacity:0},{opacity:1,duration:0.01},0.345);
+    tl.fromTo("#juara1-s0 .ju-p",{scale:1.25},{scale:1.05,duration:0.7,ease:"power2.out"},0.345);
+    tl.to("#juara1-s0",{opacity:0,duration:0.01},0.995);
+    tl.fromTo("#juara1-w0",{opacity:0,scale:1.9},{opacity:1,scale:1,duration:0.16,ease:"power4.in"},0.225);
+    tl.to("#juara1-w0",{opacity:0,duration:0.06,ease:"none"},0.965);
+    tl.fromTo("#juara1-flash",{opacity:0},{opacity:0.4,duration:0.03,ease:"none"},0.355).to("#juara1-flash",{opacity:0,duration:0.28,ease:"power2.out"},0.385);
+tl.fromTo("#juara1-s1",{opacity:0},{opacity:1,duration:0.01},1.005);
+    tl.fromTo("#juara1-s1 .ju-p",{scale:1.25},{scale:1.05,duration:0.74,ease:"power2.out"},1.005);
+    tl.to("#juara1-s1",{opacity:0,duration:0.01},1.695);
+    tl.fromTo("#juara1-w1",{opacity:0,scale:2.4},{opacity:1,scale:1,duration:0.16,ease:"power4.in"},0.885);
+    tl.to("#juara1-w1",{opacity:0,duration:0.06,ease:"none"},1.665);
+    tl.fromTo("#juara1-flash",{opacity:0},{opacity:0.75,duration:0.03,ease:"none"},1.015).to("#juara1-flash",{opacity:0,duration:0.28,ease:"power2.out"},1.045);
+    tl.fromTo("#juara1-txt",{x:0,y:0},{x:-18,y:10.799999999999999,duration:0.034,ease:"none"},1.045).to("#juara1-txt",{x:13.5,y:-9,duration:0.034,ease:"none"},1.079).to("#juara1-txt",{x:0,y:0,duration:0.06,ease:"power2.out"},1.113);
+tl.fromTo("#juara1-s2",{opacity:0},{opacity:1,duration:0.01},1.705);
+    tl.fromTo("#juara1-s2 .ju-p",{scale:1.25},{scale:1.05,duration:0.36,ease:"power2.out"},1.705);
+    tl.to("#juara1-s2",{opacity:0,duration:0.01},2.015);
+    tl.fromTo("#juara1-w2",{opacity:0,scale:1.9},{opacity:1,scale:1,duration:0.16,ease:"power4.in"},1.585);
+    tl.to("#juara1-w2",{opacity:0,duration:0.06,ease:"none"},1.985);
+    tl.fromTo("#juara1-flash",{opacity:0},{opacity:0.4,duration:0.03,ease:"none"},1.715).to("#juara1-flash",{opacity:0,duration:0.28,ease:"power2.out"},1.745);
+tl.fromTo("#juara1-s3",{opacity:0},{opacity:1,duration:0.01},2.025);
+    tl.fromTo("#juara1-s3 .ju-p",{scale:1.25},{scale:1.05,duration:1.108,ease:"power2.out"},2.025);
+    tl.fromTo("#juara1-w3",{opacity:0,scale:2.4},{opacity:1,scale:1,duration:0.16,ease:"power4.in"},1.905);
+    tl.fromTo("#juara1-flash",{opacity:0},{opacity:0.75,duration:0.03,ease:"none"},2.035).to("#juara1-flash",{opacity:0,duration:0.28,ease:"power2.out"},2.065);
+    tl.fromTo("#juara1-txt",{x:0,y:0},{x:-18,y:10.799999999999999,duration:0.034,ease:"none"},2.065).to("#juara1-txt",{x:13.5,y:-9,duration:0.034,ease:"none"},2.099).to("#juara1-txt",{x:0,y:0,duration:0.06,ease:"power2.out"},2.133);
+
+    tl.to("#juara1-txt",{scale:2.2,opacity:0,filter:"blur(12px)",duration:0.2,ease:"power3.in"},2.933);
+    window.__timelines["juara1"] = tl;
+  </script>
+</template>

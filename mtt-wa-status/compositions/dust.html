@@ -1,0 +1,23 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;pointer-events:none;}
+    #root i{position:absolute;left:0;top:0;width:6px;height:6px;border-radius:50%;background:#fff1b8;box-shadow:0 0 10px 3px rgba(255,200,90,.75);}
+  </style>
+  <div id="root" data-composition-id="dust" data-width="1080" data-height="1350" data-layout-ignore>
+    <i id="dust-0"></i><i id="dust-1"></i><i id="dust-2"></i><i id="dust-3"></i><i id="dust-4"></i><i id="dust-5"></i><i id="dust-6"></i><i id="dust-7"></i><i id="dust-8"></i><i id="dust-9"></i><i id="dust-10"></i><i id="dust-11"></i><i id="dust-12"></i><i id="dust-13"></i><i id="dust-14"></i><i id="dust-15"></i><i id="dust-16"></i><i id="dust-17"></i><i id="dust-18"></i><i id="dust-19"></i><i id="dust-20"></i><i id="dust-21"></i><i id="dust-22"></i><i id="dust-23"></i><i id="dust-24"></i><i id="dust-25"></i><i id="dust-26"></i><i id="dust-27"></i><i id="dust-28"></i><i id="dust-29"></i><i id="dust-30"></i><i id="dust-31"></i><i id="dust-32"></i><i id="dust-33"></i><i id="dust-34"></i><i id="dust-35"></i><i id="dust-36"></i><i id="dust-37"></i><i id="dust-38"></i><i id="dust-39"></i><i id="dust-40"></i><i id="dust-41"></i>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    let seed = 777; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    for (let n = 0; n < 42; n++) {
+      const x = rnd() * 1080, y0 = rnd() * 1350 + 200, rise = 500 + rnd() * 900, s = 0.4 + rnd() * 1.1;
+      const el = "#dust-" + n;
+      tl.fromTo(el, {x: x, y: y0, scale: s}, {x: x + (rnd() - 0.5) * 160, y: y0 - rise, scale: s, duration: 53.4, ease: "none"}, 0);
+      // twinkle: a finite run of fades, phase-shifted per dot
+      const period = 1.2 + rnd() * 1.8, phase = rnd() * period;
+      const reps = Math.floor((53.4 - phase) / period);
+      tl.fromTo(el, {opacity: 0.05}, {opacity: 0.55 + rnd() * 0.4, duration: period / 2, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, reps * 2 - 1)}, phase);
+    }
+    window.__timelines["dust"] = tl;
+  </script>
+</template>

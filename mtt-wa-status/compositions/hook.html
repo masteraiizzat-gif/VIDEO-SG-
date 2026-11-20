@@ -1,0 +1,58 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#02040f;}
+    #hk-wall{position:absolute;inset:0;}
+    #hk-grid{position:absolute;left:0;top:0;width:1080px;height:1350px;}
+    #root .hk-tile{position:absolute;width:360px;height:225px;opacity:.55;}
+    #hk-sel{position:absolute;left:0;top:0;width:360px;height:225px;border:5px solid #ffd66e;box-shadow:0 0 30px rgba(255,200,80,.8),inset 0 0 24px rgba(255,200,80,.5);}
+    #hk-dim{position:absolute;inset:0;background:radial-gradient(ellipse 70% 30% at 50% 50%,rgba(2,4,15,.92) 0%,rgba(2,4,15,.6) 60%,rgba(2,4,15,.2) 100%);}
+    #hk-l1{position:absolute;left:0;top:470px;width:1080px;text-align:center;font:900 210px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 0 #5a3a05) drop-shadow(0 0 36px rgba(255,190,60,.5));}
+    #hk-l2{position:absolute;left:0;top:700px;width:1080px;text-align:center;font:800 40px/1 "MontserratX",sans-serif;color:#fff;letter-spacing:.24em;padding-left:.24em;}
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1350">
+    <div id="hk-wall" data-layout-allow-overflow>
+      <div id="hk-grid">
+      <img class="hk-tile" id="hk-t0" src="assets/tiles/01-shah.jpg" alt="" style="left:0px;top:0px"/>
+      <img class="hk-tile" id="hk-t1" src="assets/tiles/02-mohamad.jpg" alt="" style="left:360px;top:0px"/>
+      <img class="hk-tile" id="hk-t2" src="assets/tiles/03-rex.jpg" alt="" style="left:720px;top:0px"/>
+      <img class="hk-tile" id="hk-t3" src="assets/tiles/04-akmal.jpg" alt="" style="left:0px;top:225px"/>
+      <img class="hk-tile" id="hk-t4" src="assets/tiles/05-sukri.jpg" alt="" style="left:360px;top:225px"/>
+      <img class="hk-tile" id="hk-t5" src="assets/tiles/06-sherry-soep.jpg" alt="" style="left:720px;top:225px"/>
+      <img class="hk-tile" id="hk-t6" src="assets/tiles/07-lynd-a-robert.jpg" alt="" style="left:0px;top:450px"/>
+      <img class="hk-tile" id="hk-t7" src="assets/tiles/08-adriana-jane.jpg" alt="" style="left:360px;top:450px"/>
+      <img class="hk-tile" id="hk-t8" src="assets/tiles/09-marinda-majapin.jpg" alt="" style="left:720px;top:450px"/>
+      <img class="hk-tile" id="hk-t9" src="assets/tiles/10-lucia.jpg" alt="" style="left:0px;top:675px"/>
+      <img class="hk-tile" id="hk-t10" src="assets/tiles/11-izza.jpg" alt="" style="left:360px;top:675px"/>
+      <img class="hk-tile" id="hk-t11" src="assets/tiles/12-norashikin.jpg" alt="" style="left:720px;top:675px"/>
+      <img class="hk-tile" id="hk-t12" src="assets/tiles/13-siti-hamidah.jpg" alt="" style="left:0px;top:900px"/>
+      <img class="hk-tile" id="hk-t13" src="assets/tiles/14-rias.jpg" alt="" style="left:360px;top:900px"/>
+      <img class="hk-tile" id="hk-t14" src="assets/tiles/15-leo-zackery.jpg" alt="" style="left:720px;top:900px"/>
+      <img class="hk-tile" id="hk-t15" src="assets/tiles/16-qaizil.jpg" alt="" style="left:0px;top:1125px"/>
+      <img class="hk-tile" id="hk-t16" src="assets/tiles/17-roslan.jpg" alt="" style="left:360px;top:1125px"/>
+      <img class="hk-tile" id="hk-t17" src="assets/tiles/18-sam-yong.jpg" alt="" style="left:720px;top:1125px"/>
+      <div id="hk-sel"></div>
+      </div>
+      <div id="hk-dim"></div>
+      <div id="hk-l1">18 WIRA</div>
+      <div id="hk-l2">MALAYSIA THERAPISTS TEAM</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#hk-grid",{scale:1.0},{scale:1.08,duration:1.133,ease:"none"},0);
+    tl.set("#hk-sel",{x:360,y:225},0);
+    tl.fromTo("#hk-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},0);
+    tl.fromTo("#hk-t4",{opacity:1},{opacity:0.55,duration:0.36,ease:"power2.in"},0);
+    tl.set("#hk-sel",{x:0,y:675},0.375);
+    tl.fromTo("#hk-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},0.375);
+    tl.fromTo("#hk-t9",{opacity:1},{opacity:0.55,duration:0.36,ease:"power2.in"},0.375);
+    tl.set("#hk-sel",{x:360,y:900},0.755);
+    tl.fromTo("#hk-sel",{scale:1.12,opacity:1},{scale:1,opacity:1,duration:0.2,ease:"expo.out"},0.755);
+    tl.fromTo("#hk-t13",{opacity:1},{opacity:0.55,duration:0.36,ease:"power2.in"},0.755);
+    tl.fromTo("#hk-l1",{scale:1.15,opacity:1},{scale:1,opacity:1,duration:0.4,ease:"expo.out"},0);
+    tl.fromTo("#hk-l2",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:0.2,ease:"power2.out"},0.2);
+    tl.to("#hk-wall",{scale:2.6,opacity:0,filter:"blur(12px)",duration:0.25,ease:"power3.in"},0.883);
+
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

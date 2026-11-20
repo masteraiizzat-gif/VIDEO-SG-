@@ -1,0 +1,29 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 50% 50%,#0f2160 0%,#050b2a 55%,#02040f 100%);}
+    #fr-rays{position:absolute;left:-560px;top:-140px;width:2200px;height:2200px;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(255,210,110,.15) 0deg 5deg,rgba(255,210,110,0) 5deg 15deg);opacity:.7;}
+    #fr-l1,#fr-l2{position:absolute;left:0;width:1080px;height:4px;background:linear-gradient(90deg,rgba(255,214,110,0),#ffd66e 20%,#fff1b8 50%,#ffd66e 80%,rgba(255,214,110,0));}
+    #fr-l1{top:281px;} #fr-l2{top:1635px;}
+    #fr-top{position:absolute;left:0;top:168px;width:1080px;height:113px;}
+    #fr-logo{position:absolute;left:36px;top:2px;width:150px;height:89px;-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 72%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 72%,transparent 100%);}
+    #fr-t1{position:absolute;left:196px;top:10px;width:850px;font:900 50px/1 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 #5a3a05);white-space:nowrap;}
+    #fr-t2{position:absolute;left:198px;top:66px;width:850px;font:800 28px/1 "MontserratX",sans-serif;color:#ffe9b0;letter-spacing:.2em;}
+    #fr-bot{position:absolute;left:0;top:1653px;width:1080px;text-align:center;}
+    #fr-b1{font:900 34px/1.2 "Cinzel",serif;background:linear-gradient(180deg,#fff7d1 0%,#ffd970 30%,#d79b22 55%,#ffe7a0 75%,#b47a12 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+    #fr-b2{margin-top:10px;font:800 28px/1.2 "MontserratX",sans-serif;color:#fff;letter-spacing:.03em;white-space:nowrap;}
+    #fr-sweep{position:absolute;left:0;top:1641px;width:260px;height:110px;background:linear-gradient(90deg,rgba(255,240,200,0),rgba(255,244,210,.35),rgba(255,240,200,0));mix-blend-mode:screen;}
+  </style>
+  <div id="root" data-composition-id="frame" data-width="1080" data-height="1920">
+    <div id="fr-rays" data-layout-ignore></div>
+    <div id="fr-top"><img id="fr-logo" src="assets/posters/mtt-logo.jpg" alt=""/><div id="fr-t1">MALAYSIA THERAPISTS TEAM</div><div id="fr-t2">KE SINGAPORE 2026 · KAMI JUARA!</div></div>
+    <div id="fr-l1"></div><div id="fr-l2"></div>
+    <div id="fr-bot"><div id="fr-b1">WORLD TRADITIONAL MASSAGE CHAMPIONSHIP</div><div id="fr-b2">28 – 29 NOVEMBER 2026 · HOTEL CHANCELLOR @ ORCHARD</div></div>
+    <div id="fr-sweep" data-layout-ignore></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#fr-rays",{rotation:0},{rotation:160.2,duration:53.4,ease:"none"},0);
+    for (let k = 0; k < 8; k++) tl.fromTo("#fr-sweep",{x:-300},{x:1400,duration:1.2,ease:"power2.inOut"},2 + k * 6);
+    window.__timelines["frame"] = tl;
+  </script>
+</template>
